@@ -4,7 +4,7 @@
 
 Repositório próprio recuperado na branch `main`. Preparação neste computador limitada a Folk, Lake, Chain e Noon; a seleção em `.local/project-selection.json` da central ignora os demais projetos e a vitrine. O inventário compartilhado e as visibilidades existentes foram preservados.
 
-Flutter 3.44.1 e Dart 3.12.1 preparados. Consultar `../devices/521caa2563-setup.md` para as versões finais dos SDKs, os resultados da instalação e as limitações do ambiente.
+Flutter 3.44.1 e Dart 3.12.1 preparados. Consultar o [registro de preparação](../devices/521caa2563-setup.md) para as versões finais dos SDKs, os resultados da instalação e as limitações do ambiente.
 
 ## Validação
 
@@ -13,7 +13,7 @@ Flutter 3.44.1 e Dart 3.12.1 preparados. Consultar `../devices/521caa2563-setup.
 - `flutter test --no-pub --reporter expanded`: código 0; 12 testes aprovados e 1 ignorado pelo próprio projeto.
 - Sincronização pela tarefa do Windows: ciclo com resultado 0, somente os quatro apps e a central. Gatilhos ao entrar no Windows e a cada três minutos conferidos.
 
-Os resultados acima não representam build de release, validação de integrações nativas ou uso em Android físico. A migração anterior não havia reexecutado estes testes; os resultados desta seção foram executados nesta preparação.
+Os resultados acima não representam build de release, validação de integrações nativas ou uso em Android físico. A migração anterior não havia reexecutado estes testes; os resultados desta seção foram executados nesta preparação. Após estes resultados, o usuário pediu para encerrar os testes; nenhuma compilação adicional foi iniciada.
 
 ## Próximo passo
 

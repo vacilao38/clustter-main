@@ -4,7 +4,7 @@ Atualizar este arquivo quando surgir algo necessário para continuar em outro co
 
 - [x] Executado `install.ps1` no segundo computador com autenticação GitHub existente. Por pedido do usuário, esta máquina trabalha e sincroniza exclusivamente Folk, Lake, Chain e Noon; a central é mantida e os demais projetos e a vitrine são ignorados por seleção local.
 - [x] Visibilidade definida pelo usuário: abrir somente membros da Clustter. Chain e Noon públicos; Folk e Lake mantêm exceção privada. Os outros projetos legados ficam privados.
-- [ ] Executar `clustter.cmd doctor` no segundo computador e instalar os SDKs dos projetos que serão usados. Os requisitos e comandos estão em `projects.json`.
+- [x] Executado `clustter.cmd doctor` no início e instalados os SDKs de Folk, Lake, Chain e Noon. Preparação, análises e testes Flutter passaram nos quatro apps. O usuário encerrou testes adicionais; versões, falhas corrigidas e limites em `devices/521caa2563-setup.md`.
 - [ ] Para atualizar APKs já instalados, transferir com segurança as mesmas chaves de assinatura. Os READMEs atuais descrevem assinatura de desenvolvimento; gerar uma nova chave em outro PC pode impedir atualização sobre a instalação existente. Nunca versionar essas chaves.
 - [x] Modelos do Folk presentes no repositório, dependências Flutter recuperadas com lockfile preservado e FFmpeg/FFprobe preparados com SHA-256 conferido.
 - [ ] Compilação e validação de integrações nativas continuam pendentes. O usuário encerrou os testes após análise e testes Flutter aprovados nos quatro apps; nenhuma compilação adicional foi iniciada.
