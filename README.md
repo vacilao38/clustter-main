@@ -1,6 +1,6 @@
 # Clustter main
 
-Central de continuidade entre computadores. Os aplicativos ficam em repositórios próprios; aqui ficam os requisitos, pendências, handoffs e o sincronizador. Sem serviço pago ou biblioteca Python adicional.
+Central de continuidade entre computadores. Os aplicativos ficam em repositórios próprios; aqui ficam os requisitos, pendências, handoffs e o sincronizador. Sem serviço pago ou biblioteca Python adicional. O inventário distingue membros da Clustter e projetos legados privados; cadastrar um legado para continuidade não o inclui na família nem na vitrine.
 
 ## Preparar o outro computador (uma vez)
 

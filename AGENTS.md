@@ -4,7 +4,7 @@
 - Esta central contém inventário, instruções, pendências e o sincronizador; código de aplicativos fica nos respectivos repositórios.
 - Antes de trabalhar: executar `clustter.cmd sync`, ler `PENDENCIAS.md` e o handoff do projeto. Conferir `.local/status.json` se algum repositório falhar.
 - Depois de trabalhar: atualizar `handoffs/<id>.md` com resultado, testes e próximo passo; executar `clustter.cmd sync`. Não declarar sincronizado se o comando falhar.
-- Novos apps/ferramentas: repositório próprio público por padrão, salvo motivo de privacidade explicitamente registrado em `projects.json`. Não mudar automaticamente a visibilidade de repositórios existentes.
+- Novos apps/ferramentas da Clustter: repositório próprio público por padrão, salvo motivo de privacidade explicitamente registrado em `projects.json`. Projetos fora da família não têm abertura pública autorizada. Não mudar automaticamente a visibilidade de repositórios existentes.
 - Cadastrar todo projeto em `projects.json` com URL, pasta relativa, branch de continuidade, requisitos e comandos. A pasta é relativa ao workspace, nunca a um usuário do Windows.
 - Durante o uso simples nos dois PCs, trabalhar na branch de continuidade cadastrada. Outras branches não são trocadas automaticamente; publicar a branch e atualizar o inventário se a continuidade passar a ocorrer nela.
 - Checkpoints automáticos podem conter trabalho incompleto; não equivalem a teste, release ou aprovação. Registrar validação no handoff.

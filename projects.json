@@ -247,5 +247,6 @@
       "handoff": "handoffs/site.md",
       "scope": "clustter"
     }
-  ]
+  ],
+  "default_visibility_scope": "clustter"
 }

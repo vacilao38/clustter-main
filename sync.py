@@ -212,7 +212,8 @@ def sync_repo(path, entry, device, background=False):
             # Only abort the merge we started, after making a clean local checkpoint.
             if (gitdir / "MERGE_HEAD").exists():
                 git(path, "merge", "--abort")
-            rescue = f"codex/sync-rescue-{device}-{time.time_ns()}"
+            # Repeated timer runs for the same conflict reuse one rescue branch.
+            rescue = f"codex/sync-rescue-{device}-{value(path, 'rev-parse', 'HEAD')[:12]}"
             saved = git(path, "push", "origin", f"HEAD:refs/heads/{rescue}", check=False).returncode == 0
             detail = f"Resgate enviado: {rescue}" if saved else "Checkpoint preservado localmente; envio de resgate pendente."
             raise SyncError(f"Integração interrompida. {detail}")

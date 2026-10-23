@@ -43,7 +43,7 @@ if (-not (Test-Path -LiteralPath $workspaceAgents)) {
 - Ler clustter-main/AGENTS.md, projects.json, PENDENCIAS.md e o handoff do projeto antes de trabalhar.
 - Executar clustter-main/clustter.cmd sync ao iniciar e encerrar; registrar falhas e conflitos.
 - Atualizar clustter-main/handoffs/<id>.md com resultado, testes e próximo passo.
-- Cada app/ferramenta tem repositório próprio público por padrão, salvo exceção documentada; cadastrar em projects.json.
+- Cada app/ferramenta da Clustter tem repositório próprio público por padrão, salvo exceção documentada; cadastrar em projects.json. Não abrir projetos externos à família.
 - Nunca publicar dados ou segredos. Publicação no catálogo exige pedido explícito.
 '@
     [IO.File]::WriteAllText($workspaceAgents, $instructions, $utf8)
