@@ -174,6 +174,38 @@ class IntegrationTests(unittest.TestCase):
         with self.assertRaises(sync.SyncError):
             sync.guard_blob("lib/config.dart", dummy + b"example.org")
 
+    def test_selection_excludes_unselected_repositories_from_real_cycle(self):
+        manifest = {"central_url": str(self.remote), "projects": [
+            dict(self.entry, id="chosen", path="chosen-app"),
+            dict(self.entry, id="ignored", path="ignored-app")]}
+        (self.a / "projects.json").write_text(json.dumps(manifest), encoding="utf-8")
+        (self.a / ".gitignore").write_text(".local/\n", encoding="utf-8")
+        (self.a / ".local").mkdir()
+        (self.a / ".local" / "project-selection.json").write_text(
+            json.dumps({"include": ["chosen"]}), encoding="utf-8")
+        report = sync.sync(self.a, self.base)
+        self.assertEqual(set(report), {"chosen", "central"})
+        self.assertTrue((self.base / "chosen-app" / "README.md").exists())
+        self.assertFalse((self.base / "ignored-app").exists())
+
+    def test_empty_selection_only_includes_central(self):
+        local = self.a / ".local"
+        local.mkdir()
+        (local / "project-selection.json").write_text('{"include": []}', encoding="utf-8")
+        self.assertEqual(sync.selected_projects(self.a, {"projects": [{"id": "app"}]}), [])
+
+    def test_invalid_selection_stops_before_touching_repositories(self):
+        manifest = {"central_url": str(self.remote), "projects": [dict(self.entry, id="app", path="app")]}
+        (self.a / "projects.json").write_text(json.dumps(manifest), encoding="utf-8")
+        local = self.a / ".local"
+        local.mkdir()
+        for selection in ({"include": ["missing"]}, {"include": "app"}, []):
+            (local / "project-selection.json").write_text(json.dumps(selection), encoding="utf-8")
+            with patch.object(sync, "attempt") as attempt:
+                with self.assertRaises(sync.SyncError):
+                    sync.sync(self.a, self.base)
+                attempt.assert_not_called()
+
 
 if __name__ == "__main__":
     unittest.main()

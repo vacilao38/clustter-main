@@ -30,6 +30,18 @@ O Codex deve executar `sync` ao começar e terminar, e atualizar `handoffs/<proj
 
 ## Comportamento da sincronização
 
+### Selecionar projetos neste computador
+
+Para trabalhar apenas com alguns aplicativos, crie `.local/project-selection.json` na central:
+
+```json
+{"include": ["folk", "lake", "chain", "noon"]}
+```
+
+`sync` e `doctor` consideram apenas os IDs selecionados. A central continua sendo sincronizada; os demais repositórios existentes são preservados e ignorados. A seleção fica somente neste computador, não modifica `projects.json` nem a seleção de outro PC. Uma lista vazia sincroniza apenas a central. Configurações inválidas interrompem a execução sem ampliar o escopo.
+
+### Ciclo
+
 1. Atualiza a central e relê o inventário.
 2. Clona repositórios ausentes em pastas irmãs da central.
 3. Salva alterações elegíveis em commits de checkpoint, busca a branch cadastrada, integra alterações e faz push sem força.

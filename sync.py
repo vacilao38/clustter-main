@@ -230,6 +230,20 @@ def attempt(path, entry, device, background):
                 else f"Falha local/rede: {type(error).__name__}"}
 
 
+def selected_projects(root, manifest):
+    selection_file = root / ".local" / "project-selection.json"
+    if not selection_file.exists():
+        return manifest["projects"]
+    selection = json.loads(selection_file.read_text(encoding="utf-8"))
+    included = selection.get("include") if isinstance(selection, dict) else None
+    if not isinstance(included, list) or not all(isinstance(item, str) for item in included):
+        raise SyncError("Seleção local precisa de uma lista include de IDs de projetos.")
+    known = {entry["id"] for entry in manifest["projects"]}
+    if set(included) - known:
+        raise SyncError("Seleção local contém projeto ausente do inventário; revise .local/project-selection.json.")
+    return [entry for entry in manifest["projects"] if entry["id"] in included]
+
+
 def sync(root, workspace, background=False):
     local = root / ".local"
     device_file = local / "device.txt"
@@ -240,12 +254,14 @@ def sync(root, workspace, background=False):
     manifest = json.loads((root / "projects.json").read_text(encoding="utf-8"))
     central = {"url": manifest["central_url"], "branch": "main"}
     with exclusive_lock(local / "sync.lock"):
+        # Reject invalid local selections before any repository operation.
+        selected_projects(root, manifest)
         central_state = attempt(root, central, device, background)
         # If offline, the last local inventory still lets each app make a checkpoint.
         manifest = json.loads((root / "projects.json").read_text(encoding="utf-8"))
         report = {}
         known_paths = {root.resolve()}
-        for entry in manifest["projects"]:
+        for entry in selected_projects(root, manifest):
             try:
                 path = safe_path(workspace, entry["path"])
                 if path in known_paths or any(path.is_relative_to(other) or other.is_relative_to(path) for other in known_paths):
@@ -263,9 +279,17 @@ def sync(root, workspace, background=False):
 
 def doctor(root):
     manifest = json.loads((root / "projects.json").read_text(encoding="utf-8"))
-    checks = {"git": ["git", "--version"], "python": [sys.executable, "--version"],
-              "flutter": ["flutter", "--version"], "java": ["java", "-version"],
-              "dotnet": ["dotnet", "--version"], "tesseract": ["tesseract", "--version"]}
+    projects = selected_projects(root, manifest)
+    checks = {"git": ["git", "--version"], "python": [sys.executable, "--version"]}
+    requirements = " ".join(item for entry in projects for item in entry["requirements"]).lower()
+    for label, keyword, command in (
+        ("flutter", "flutter", ["flutter", "--version"]),
+        ("java", "java", ["java", "-version"]),
+        ("dotnet", ".net", ["dotnet", "--version"]),
+        ("tesseract", "tesseract", ["tesseract", "--version"]),
+    ):
+        if keyword in requirements:
+            checks[label] = command
     for name, command in checks.items():
         executable = shutil.which(command[0])
         if not executable:
@@ -281,7 +305,7 @@ def doctor(root):
             print(f"{name}: {lines[0] if lines else 'sem resposta'}")
         except (OSError, subprocess.TimeoutExpired):
             print(f"{name}: erro ao verificar")
-    for entry in manifest["projects"]:
+    for entry in projects:
         print(f"\n{entry['id']}: {', '.join(entry['requirements'])}")
         print("  Preparar: " + " ; ".join(entry["setup"]))
         print("  Validar: " + " ; ".join(entry["validate"]))
