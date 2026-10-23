@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "central_url": "https://github.com/vacilao38/clustter-main.git",
+  "default_new_repository_visibility": "public",
+  "projects": [
+    {
+      "id": "folk",
+      "path": "folk_app",
+      "repo": "folk-transcriber",
+      "visibility": "private",
+      "privacy_reason": "Repositório existente privado; preservar a decisão anterior.",
+      "requirements": [
+        "Flutter 3.44.1 / Dart 3.12.1",
+        "Visual Studio C++ (Desktop development with C++) para Windows",
+        "Android SDK e Java 21 para Android",
+        "Android NDK 29.0.13113456",
+        "Modelos versionados em assets/models; utilitários via tool/prepare-windows.ps1"
+      ],
+      "setup": [
+        "flutter pub get",
+        "powershell -NoProfile -ExecutionPolicy Bypass -File tool/prepare-windows.ps1"
+      ],
+      "validate": [
+        "flutter analyze",
+        "flutter test"
+      ],
+      "url": "https://github.com/vacilao38/folk-transcriber.git",
+      "branch": "main",
+      "handoff": "handoffs/folk.md"
+    },
+    {
+      "id": "lake",
+      "path": "lake_app",
+      "repo": "lake",
+      "visibility": "private",
+      "privacy_reason": "Repositório existente privado; preservar a decisão anterior.",
+      "requirements": [
+        "Flutter 3.44.1 / Dart 3.12.1",
+        "Visual Studio C++ (Desktop development with C++) para Windows",
+        "Android SDK e Java 21 para Android"
+      ],
+      "setup": [
+        "flutter pub get"
+      ],
+      "validate": [
+        "flutter analyze",
+        "flutter test"
+      ],
+      "url": "https://github.com/vacilao38/lake.git",
+      "branch": "main",
+      "handoff": "handoffs/lake.md"
+    },
+    {
+      "id": "chain",
+      "path": "chain_app",
+      "repo": "chain",
+      "visibility": "private",
+      "requirements": [
+        "Flutter 3.44.1 / Dart 3.12.1",
+        "Visual Studio C++ (Desktop development with C++) para Windows",
+        "Android SDK e Java 21 para Android"
+      ],
+      "setup": [
+        "flutter pub get"
+      ],
+      "validate": [
+        "flutter analyze",
+        "flutter test"
+      ],
+      "url": "https://github.com/vacilao38/chain.git",
+      "branch": "main",
+      "handoff": "handoffs/chain.md",
+      "privacy_reason": "App existente sob a regra anterior de código privado; abertura pública depende da autorização específica pendente. Novos apps permanecem públicos por padrão."
+    },
+    {
+      "id": "noon",
+      "path": "noon_app",
+      "repo": "noon",
+      "visibility": "private",
+      "requirements": [
+        "Flutter 3.44.1 / Dart 3.12.1",
+        "Visual Studio C++ (Desktop development with C++) para Windows",
+        "Android SDK e Java 21 para Android"
+      ],
+      "setup": [
+        "flutter pub get"
+      ],
+      "validate": [
+        "flutter analyze",
+        "flutter test"
+      ],
+      "url": "https://github.com/vacilao38/noon.git",
+      "branch": "main",
+      "handoff": "handoffs/noon.md",
+      "privacy_reason": "App existente sob a regra anterior de código privado; abertura pública depende da autorização específica pendente. Novos apps permanecem públicos por padrão."
+    },
+    {
+      "id": "cofre",
+      "path": "cofre_imagens_app",
+      "repo": "cofre-imagens",
+      "visibility": "private",
+      "requirements": [
+        "Python 3.10+ com Tkinter",
+        "Pillow e openpyxl em requirements.txt"
+      ],
+      "setup": [
+        "python -m venv .venv",
+        ".venv/Scripts/python -m pip install -r requirements.txt"
+      ],
+      "validate": [
+        ".venv/Scripts/python -m unittest discover -s tests"
+      ],
+      "url": "https://github.com/vacilao38/cofre-imagens.git",
+      "branch": "main",
+      "handoff": "handoffs/cofre.md",
+      "privacy_reason": "App existente sob a regra anterior de código privado; abertura pública depende da autorização específica pendente. Novos apps permanecem públicos por padrão."
+    },
+    {
+      "id": "memoteca",
+      "path": "memoteca_app",
+      "repo": "memoteca",
+      "visibility": "private",
+      "requirements": [
+        "Python 3.10+ com Tkinter",
+        "Pillow e pytesseract em requirements.txt",
+        "Tesseract OCR com idioma português (por) para OCR local"
+      ],
+      "setup": [
+        "python -m venv .venv",
+        ".venv/Scripts/python -m pip install -r requirements.txt"
+      ],
+      "validate": [
+        ".venv/Scripts/python -m unittest discover -s tests"
+      ],
+      "url": "https://github.com/vacilao38/memoteca.git",
+      "branch": "main",
+      "handoff": "handoffs/memoteca.md",
+      "privacy_reason": "App existente sob a regra anterior de código privado; abertura pública depende da autorização específica pendente. Novos apps permanecem públicos por padrão."
+    },
+    {
+      "id": "colaboradores",
+      "path": "acompanhamento_colaboradores_app",
+      "repo": "acompanhamento-colaboradores",
+      "visibility": "private",
+      "requirements": [
+        "Python 3.10+ com Tkinter"
+      ],
+      "setup": [
+        "python -m venv .venv"
+      ],
+      "validate": [
+        ".venv/Scripts/python -m unittest discover -s tests"
+      ],
+      "url": "https://github.com/vacilao38/acompanhamento-colaboradores.git",
+      "branch": "main",
+      "handoff": "handoffs/colaboradores.md",
+      "privacy_reason": "App existente sob a regra anterior de código privado; abertura pública depende da autorização específica pendente. Novos apps permanecem públicos por padrão."
+    },
+    {
+      "id": "rota-clara",
+      "path": "fora_de_rota_winui",
+      "repo": "rota-clara",
+      "visibility": "private",
+      "requirements": [
+        "Windows 11 x64",
+        ".NET SDK 10",
+        "Windows SDK 10.0.26100",
+        "NuGet (Microsoft.WindowsAppSDK fixado no .csproj)"
+      ],
+      "setup": [
+        "dotnet restore RotaClara.App/RotaClara.App.csproj"
+      ],
+      "validate": [
+        "dotnet run --project RotaClara.Tests/RotaClara.Tests.csproj",
+        "powershell -NoProfile -ExecutionPolicy Bypass -File build.ps1 -Test"
+      ],
+      "url": "https://github.com/vacilao38/rota-clara.git",
+      "branch": "main",
+      "handoff": "handoffs/rota-clara.md",
+      "privacy_reason": "App existente sob a regra anterior de código privado; abertura pública depende da autorização específica pendente. Novos apps permanecem públicos por padrão."
+    },
+    {
+      "id": "gerador-kml",
+      "path": "gerador_kml_work",
+      "repo": "gerador-kml",
+      "visibility": "private",
+      "requirements": [
+        "Python 3.10+ com Tkinter"
+      ],
+      "setup": [
+        "python -m venv .venv"
+      ],
+      "validate": [
+        ".venv/Scripts/python -m unittest discover -s tests"
+      ],
+      "url": "https://github.com/vacilao38/gerador-kml.git",
+      "branch": "main",
+      "handoff": "handoffs/gerador-kml.md",
+      "privacy_reason": "App existente sob a regra anterior de código privado; abertura pública depende da autorização específica pendente. Novos apps permanecem públicos por padrão."
+    },
+    {
+      "id": "localizador-rotas",
+      "path": "localizador_rotas_app",
+      "repo": "localizador-rotas",
+      "visibility": "private",
+      "requirements": [
+        "Python 3.10+ com Tkinter"
+      ],
+      "setup": [
+        "python -m venv .venv"
+      ],
+      "validate": [
+        ".venv/Scripts/python -m unittest discover -s tests"
+      ],
+      "url": "https://github.com/vacilao38/localizador-rotas.git",
+      "branch": "main",
+      "handoff": "handoffs/localizador-rotas.md",
+      "privacy_reason": "App existente sob a regra anterior de código privado; abertura pública depende da autorização específica pendente. Novos apps permanecem públicos por padrão."
+    },
+    {
+      "id": "site",
+      "path": "tools_pool_site",
+      "repo": "clustter-cores-site",
+      "visibility": "public",
+      "allow_dist": true,
+      "requirements": [
+        "Site estático sem build",
+        "Node.js para serve.mjs (prévia local opcional)"
+      ],
+      "setup": [
+        "Consultar README.md; dist/ contém os arquivos estáticos editáveis"
+      ],
+      "validate": [
+        "node --check serve.mjs",
+        "Conferir prévia local sem publicar"
+      ],
+      "url": "https://github.com/vacilao38/clustter-cores-site.git",
+      "branch": "main",
+      "handoff": "handoffs/site.md"
+    }
+  ]
+}
