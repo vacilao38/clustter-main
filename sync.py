@@ -244,6 +244,19 @@ def selected_projects(root, manifest):
     return [entry for entry in manifest["projects"] if entry["id"] in included]
 
 
+def update_local_schedule(root):
+    """Migrate older Windows installations once, including the other computer."""
+    if os.name != "nt" or (root / ".local" / "schedule-logon-only-v1").exists():
+        return
+    script = root / "update-schedule.ps1"
+    if not script.exists():
+        return  # Disposable test repositories do not contain the Windows installer.
+    powershell = str(Path(os.environ["SystemRoot"]) / "System32/WindowsPowerShell/v1.0/powershell.exe")
+    result = run([powershell, "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", str(script)], check=False, timeout=30)
+    if result.returncode:
+        raise SyncError("Não foi possível remover a repetição antiga. Execute update-schedule.ps1 neste computador.")
+
+
 def sync(root, workspace, background=False):
     local = root / ".local"
     device_file = local / "device.txt"
@@ -257,6 +270,7 @@ def sync(root, workspace, background=False):
         # Reject invalid local selections before any repository operation.
         selected_projects(root, manifest)
         central_state = attempt(root, central, device, background)
+        update_local_schedule(root)
         # If offline, the last local inventory still lets each app make a checkpoint.
         manifest = json.loads((root / "projects.json").read_text(encoding="utf-8"))
         report = {}

@@ -15,7 +15,7 @@ git clone https://github.com/vacilao38/clustter-main.git
 powershell -NoProfile -ExecutionPolicy Bypass -File .\clustter-main\install.ps1
 ```
 
-A pasta pode ser outra. O instalador registra apenas este computador, executa a primeira sincronização e agenda novas execuções a cada três minutos e ao entrar no Windows. É necessário entrar no usuário do Windows e ter internet; desligado ou sem rede não envia nem recebe. Ao voltar, a próxima execução tenta novamente. Não é preciso que os dois PCs estejam ligados juntos.
+A pasta pode ser outra. O instalador registra apenas este computador, executa a primeira sincronização e agenda uma execução ao entrar no Windows. Não há verificação periódica. É necessário entrar no usuário do Windows e ter internet; desligado ou sem rede não envia nem recebe. Não é preciso que os dois PCs estejam ligados juntos. Se a entrada no Windows ocorrer sem rede, execute `clustter.cmd sync` quando a conexão voltar.
 
 Abra a pasta **Clustter** como projeto no Codex. O instalador cria um `AGENTS.md` na raiz apenas se ainda não existir. As instruções são baseadas em arquivos, portanto funcionam também em uma conversa nova. Instale em ambos os computadores: a configuração de inicialização é local.
 
@@ -26,7 +26,9 @@ Abra a pasta **Clustter** como projeto no Codex. O instalador cria um `AGENTS.md
 .\clustter-main\clustter.cmd doctor     # verificar ferramentas e pendências
 ```
 
-O Codex deve executar `sync` ao começar e terminar, e atualizar `handoffs/<projeto>.md` com o próximo passo. O agendamento cobre o intervalo entre sessões. `projects.json` descreve as ferramentas necessárias para cada app, com comandos de preparação e validação. `doctor` verifica executáveis e mostra versões; não instala SDKs automaticamente.
+O Codex deve executar `sync` ao começar e terminar, e atualizar `handoffs/<projeto>.md` com o próximo passo. Não existe execução recorrente entre sessões. `projects.json` descreve as ferramentas necessárias para cada app, com comandos de preparação e validação. `doctor` verifica executáveis e mostra versões; não instala SDKs automaticamente.
+
+Instalações antigas removem a repetição automaticamente quando o sincronizador recebe esta atualização. Para aplicar imediatamente em outra máquina que já atualizou a central, execute `powershell -NoProfile -ExecutionPolicy Bypass -File .\clustter-main\update-schedule.ps1`.
 
 ## Comportamento da sincronização
 

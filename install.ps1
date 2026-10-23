@@ -60,28 +60,23 @@ $arguments = '-NoProfile -NonInteractive -WindowStyle Hidden -ExecutionPolicy By
 try {
     $action = New-ScheduledTaskAction -Execute $psExecutable -Argument $arguments -WorkingDirectory $centralPath
     $logon = New-ScheduledTaskTrigger -AtLogOn -User ([Security.Principal.WindowsIdentity]::GetCurrent().Name)
-    $periodic = New-ScheduledTaskTrigger -Once -At (Get-Date).AddMinutes(3) -RepetitionInterval (New-TimeSpan -Minutes 3)
     $settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -MultipleInstances IgnoreNew -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit (New-TimeSpan -Minutes 20)
     $principal = New-ScheduledTaskPrincipal -UserId ([Security.Principal.WindowsIdentity]::GetCurrent().Name) -LogonType Interactive -RunLevel Limited
-    Register-ScheduledTask -TaskName $taskName -Action $action -Trigger @($logon,$periodic) -Settings $settings -Principal $principal -Force | Out-Null
+    Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $logon -Settings $settings -Principal $principal -Force | Out-Null
     if (Test-Path -LiteralPath $startupPath) { Remove-Item -LiteralPath $startupPath }
-    Write-Output ('Agendamento ativo: ' + $taskName + ' (entrada no Windows e a cada 3 minutos).')
+    Write-Output ('Agendamento ativo: ' + $taskName + ' (somente entrada no Windows).')
 } catch {
-    # Standard users may lack Task Scheduler registration. A hidden logon worker is sufficient.
-    $workerPath = Join-Path $localPath 'watch.ps1'
-    $runnerLiteral = $runnerPath.Replace("'", "''")
-    $psLiteral = $psExecutable.Replace("'", "''")
-    $worker = "`$mutex = New-Object System.Threading.Mutex(`$false, 'Local\$taskName-Watch')`r`nif (-not `$mutex.WaitOne(0)) { exit 0 }`r`ntry { while (`$true) { & '$psLiteral' -NoProfile -NonInteractive -ExecutionPolicy Bypass -File '$runnerLiteral'; Start-Sleep -Seconds 180 } } finally { `$mutex.ReleaseMutex(); `$mutex.Dispose() }`r`n"
-    [IO.File]::WriteAllText($workerPath, $worker, $utf8Bom)
+    # Standard users may lack Task Scheduler registration. Run once at logon.
     $shortcut = (New-Object -ComObject WScript.Shell).CreateShortcut($startupPath)
     $shortcut.TargetPath = $psExecutable
-    $shortcut.Arguments = '-NoProfile -NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File "' + $workerPath + '"'
+    $shortcut.Arguments = $arguments
     $shortcut.WorkingDirectory = $centralPath
     $shortcut.WindowStyle = 7
     $shortcut.Save()
-    Write-Output 'Inicialização por usuário ativa (fallback sem administrador).'
-    Start-Process -FilePath $psExecutable -ArgumentList ('-NoProfile -NonInteractive -ExecutionPolicy Bypass -File "' + $workerPath + '"') -WindowStyle Hidden
+    Write-Output 'Inicialização por usuário ativa, somente uma vez ao entrar no Windows.'
 }
+& (Join-Path $centralPath 'update-schedule.ps1')
+if ($LASTEXITCODE -ne 0) { throw 'Não foi possível remover um agendamento periódico anterior.' }
 & $PythonPath (Join-Path $centralPath 'sync.py') sync
 if ($LASTEXITCODE -ne 0) { throw 'Instalado, mas há pendências de sincronização. Confira .local/status.json e autenticação GitHub.' }
 Write-Output 'Clustter pronta neste computador. Execute doctor para verificar os SDKs.'

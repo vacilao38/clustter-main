@@ -12,4 +12,6 @@ Atualizar este arquivo quando surgir algo necessário para continuar em outro co
 
 ## Ao encerrar uma sessão
 
+Por pedido do usuário, a execução periódica de três minutos foi removida. Manter somente sincronização ao entrar no Windows e ao iniciar/encerrar o trabalho. Instalações antigas aplicam a migração local ao receber a atualização da central.
+
 Atualize `handoffs/<id>.md`: resultado, validação realizada, limitações e próximo passo. Execute `clustter.cmd sync` e confira o resultado. Se houver conflito ou indisponibilidade, registre a pendência e preserve o checkpoint.
