@@ -41,7 +41,9 @@ As entradas existentes de ambiente e a identidade Git foram preservadas. Os cami
 
 ## Sincronização automática
 
-Instalador executado e tarefa local conferida com gatilho ao entrar no Windows, repetição de três minutos (`PT3M`), execução no usuário interativo e prevenção de execuções concorrentes. Foi observada uma execução real do próprio Agendador com resultado 0 e registros somente de Folk, Lake, Chain, Noon e central. Também foi executada sincronização manual real.
+A configuração inicial incluía entrada no Windows e repetição de três minutos (`PT3M`). Foi observada uma execução real do próprio Agendador com resultado 0 e registros somente de Folk, Lake, Chain, Noon e central.
+
+Posteriormente, em 23/10/2026, o usuário pediu a remoção da execução a cada três minutos. O gatilho periódico foi removido desta máquina, preservando somente o gatilho ao entrar no Windows, sem repetição. A sincronização manual continua disponível. A tarefa foi relida após a alteração e contém somente o gatilho de entrada; ações, usuário e configurações existentes foram preservados. O instalador compartilhado não foi alterado para os demais computadores.
 
 Nenhum push forçado, exclusão de trabalho ou resolução automática de conflitos foi realizado. Folk e Lake continuam privados; Chain e Noon continuam públicos. Nenhuma visibilidade foi alterada. Nenhum aplicativo, download, release ou alteração da vitrine foi publicado.
 

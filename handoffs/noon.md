@@ -11,7 +11,7 @@ Flutter 3.44.1 e Dart 3.12.1 preparados. Consultar o [registro de preparação](
 - `flutter pub get --enforce-lockfile`: código 0; `pubspec.lock` preservado.
 - `flutter analyze --no-pub`: código 0; nenhum problema encontrado.
 - `flutter test --no-pub --reporter expanded`: código 0; 28 testes aprovados e 0 ignorados pelo próprio projeto.
-- Sincronização pela tarefa do Windows: ciclo com resultado 0, somente os quatro apps e a central. Gatilhos ao entrar no Windows e a cada três minutos conferidos.
+- Sincronização pela tarefa do Windows: ciclo com resultado 0, somente os quatro apps e a central. Depois, a repetição de três minutos foi removida desta máquina por pedido do usuário; permanece somente a execução ao entrar no Windows, além da sincronização manual.
 
 Os resultados acima não representam build de release, validação de integrações nativas ou uso em Android físico. A migração anterior não havia reexecutado estes testes; os resultados desta seção foram executados nesta preparação. Após estes resultados, o usuário pediu para encerrar os testes; nenhuma compilação adicional foi iniciada.
 

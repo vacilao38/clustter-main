@@ -26,3 +26,5 @@ Os quatro aplicativos tiveram `flutter pub get --enforce-lockfile`, `flutter ana
 | Noon | 28 | 0 |
 
 Esses resultados não representam build de release, teste de áudio/transcrição nativa nem validação em Android físico. A conclusão da instalação dos SDKs e as limitações da máquina constam no registro de preparação em `devices/` e nos respectivos handoffs.
+
+Após a preparação, o usuário pediu a remoção da execução periódica nesta máquina. O gatilho de três minutos foi removido e a tarefa foi conferida somente com o gatilho ao entrar no Windows. A sincronização manual continua disponível; nenhum novo teste dos aplicativos foi executado nesta alteração.
