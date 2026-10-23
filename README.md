@@ -43,7 +43,7 @@ Se duas máquinas alterarem o mesmo trecho, o checkpoint é preservado, o merge 
 
 ## Limites e privacidade
 
-- Novos projetos têm repositório próprio público por padrão; exceções precisam de justificativa no inventário. Os apps anteriores preservam a privacidade existente; a abertura dos oito apps em migração foi submetida à autorização específica do usuário. Folk e Lake permanecem privados.
+- Novos projetos Clustter têm repositório próprio público por padrão; exceções precisam de justificativa no inventário. O usuário autorizou abrir Chain e Noon em 23/10/2026. Folk e Lake preservam a exceção privada. Projetos legados fora da família Clustter ficam privados.
 - A central não contém senhas nem arquivos principais dos apps. `.gitignore` e a verificação do sincronizador bloqueiam caminhos de dados, chaves, credenciais reconhecíveis e arquivos maiores que 90 MiB. Isso não substitui revisar o que é colocado em um repositório público.
 - Credenciais GitHub são próprias de cada PC. Chaves de assinatura Android, modelos grandes, bases pessoais e bibliotecas locais precisam de transferência separada quando necessárias. Consulte `PENDENCIAS.md`.
 - Não sincroniza o histórico de conversas/configuração pessoal do Codex nem os dados de uso dos aplicativos.

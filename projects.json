@@ -26,7 +26,8 @@
       ],
       "url": "https://github.com/vacilao38/folk-transcriber.git",
       "branch": "main",
-      "handoff": "handoffs/folk.md"
+      "handoff": "handoffs/folk.md",
+      "scope": "clustter"
     },
     {
       "id": "lake",
@@ -48,13 +49,14 @@
       ],
       "url": "https://github.com/vacilao38/lake.git",
       "branch": "main",
-      "handoff": "handoffs/lake.md"
+      "handoff": "handoffs/lake.md",
+      "scope": "clustter"
     },
     {
       "id": "chain",
       "path": "chain_app",
       "repo": "chain",
-      "visibility": "private",
+      "visibility": "public",
       "requirements": [
         "Flutter 3.44.1 / Dart 3.12.1",
         "Visual Studio C++ (Desktop development with C++) para Windows",
@@ -70,13 +72,13 @@
       "url": "https://github.com/vacilao38/chain.git",
       "branch": "main",
       "handoff": "handoffs/chain.md",
-      "privacy_reason": "App existente sob a regra anterior de código privado; abertura pública depende da autorização específica pendente. Novos apps permanecem públicos por padrão."
+      "scope": "clustter"
     },
     {
       "id": "noon",
       "path": "noon_app",
       "repo": "noon",
-      "visibility": "private",
+      "visibility": "public",
       "requirements": [
         "Flutter 3.44.1 / Dart 3.12.1",
         "Visual Studio C++ (Desktop development with C++) para Windows",
@@ -92,7 +94,7 @@
       "url": "https://github.com/vacilao38/noon.git",
       "branch": "main",
       "handoff": "handoffs/noon.md",
-      "privacy_reason": "App existente sob a regra anterior de código privado; abertura pública depende da autorização específica pendente. Novos apps permanecem públicos por padrão."
+      "scope": "clustter"
     },
     {
       "id": "cofre",
@@ -113,7 +115,8 @@
       "url": "https://github.com/vacilao38/cofre-imagens.git",
       "branch": "main",
       "handoff": "handoffs/cofre.md",
-      "privacy_reason": "App existente sob a regra anterior de código privado; abertura pública depende da autorização específica pendente. Novos apps permanecem públicos por padrão."
+      "privacy_reason": "Projeto legado fora da família Clustter identificada no catálogo; abertura do código não autorizada.",
+      "scope": "legacy"
     },
     {
       "id": "memoteca",
@@ -135,7 +138,8 @@
       "url": "https://github.com/vacilao38/memoteca.git",
       "branch": "main",
       "handoff": "handoffs/memoteca.md",
-      "privacy_reason": "App existente sob a regra anterior de código privado; abertura pública depende da autorização específica pendente. Novos apps permanecem públicos por padrão."
+      "privacy_reason": "Projeto legado fora da família Clustter identificada no catálogo; abertura do código não autorizada.",
+      "scope": "legacy"
     },
     {
       "id": "colaboradores",
@@ -154,7 +158,8 @@
       "url": "https://github.com/vacilao38/acompanhamento-colaboradores.git",
       "branch": "main",
       "handoff": "handoffs/colaboradores.md",
-      "privacy_reason": "App existente sob a regra anterior de código privado; abertura pública depende da autorização específica pendente. Novos apps permanecem públicos por padrão."
+      "privacy_reason": "Projeto legado fora da família Clustter identificada no catálogo; abertura do código não autorizada.",
+      "scope": "legacy"
     },
     {
       "id": "rota-clara",
@@ -177,7 +182,8 @@
       "url": "https://github.com/vacilao38/rota-clara.git",
       "branch": "main",
       "handoff": "handoffs/rota-clara.md",
-      "privacy_reason": "App existente sob a regra anterior de código privado; abertura pública depende da autorização específica pendente. Novos apps permanecem públicos por padrão."
+      "privacy_reason": "Projeto legado fora da família Clustter identificada no catálogo; abertura do código não autorizada.",
+      "scope": "legacy"
     },
     {
       "id": "gerador-kml",
@@ -196,7 +202,8 @@
       "url": "https://github.com/vacilao38/gerador-kml.git",
       "branch": "main",
       "handoff": "handoffs/gerador-kml.md",
-      "privacy_reason": "App existente sob a regra anterior de código privado; abertura pública depende da autorização específica pendente. Novos apps permanecem públicos por padrão."
+      "privacy_reason": "Projeto legado fora da família Clustter identificada no catálogo; abertura do código não autorizada.",
+      "scope": "legacy"
     },
     {
       "id": "localizador-rotas",
@@ -215,7 +222,8 @@
       "url": "https://github.com/vacilao38/localizador-rotas.git",
       "branch": "main",
       "handoff": "handoffs/localizador-rotas.md",
-      "privacy_reason": "App existente sob a regra anterior de código privado; abertura pública depende da autorização específica pendente. Novos apps permanecem públicos por padrão."
+      "privacy_reason": "Projeto legado fora da família Clustter identificada no catálogo; abertura do código não autorizada.",
+      "scope": "legacy"
     },
     {
       "id": "site",
@@ -236,7 +244,8 @@
       ],
       "url": "https://github.com/vacilao38/clustter-cores-site.git",
       "branch": "main",
-      "handoff": "handoffs/site.md"
+      "handoff": "handoffs/site.md",
+      "scope": "clustter"
     }
   ]
 }
