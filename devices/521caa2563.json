@@ -1,0 +1,57 @@
+{
+  "folk": {
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "23ee8b3090aa0d82d424c1054af498fdf28fcf61"
+  },
+  "lake": {
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "e8b3230d71ee23e9c2784bfcb070de18be955e2c"
+  },
+  "chain": {
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "893fa12b4c0789fbdefb561b52d9e1a8654ab761"
+  },
+  "noon": {
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "2e0ffd824d3f7ead09ba9d84f09a1bdb286ce4cb"
+  },
+  "cofre": {
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "8e4f707c7054a7a46cd6e937386c35aeeaac0b34"
+  },
+  "memoteca": {
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "3c8b3e4b4243006ad2a8369f1fc82558a6feac62"
+  },
+  "colaboradores": {
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "5bf1f390169cc58694e790f8848844465f5bb1c6"
+  },
+  "rota-clara": {
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "86aab1b791448f78150aac50eafe551e2131b583"
+  },
+  "gerador-kml": {
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "01ae6a7344914e22614a3c06b88ac0632f7bfa7d"
+  },
+  "localizador-rotas": {
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "159a20d4c0f1b9a0b979ace282fbd48cb2d0e941"
+  },
+  "site": {
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "06ebb19418f94b91490ab2bc7dac27d64990dd2c"
+  }
+}
