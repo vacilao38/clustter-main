@@ -35,3 +35,13 @@ Análise estática sem problemas, 27 testes de domínio/IO/widgets e 1 integraç
 Validar SAF em celular e tablet reais (concessão/recusa, acesso persistente, cópia/desfazer, rotação/interrupção) e testar IA com chave e lote sintético autorizado. Medir desempenho em bibliotecas maiores e definir assinatura de distribuição para versões futuras. Build Android após testes deve regenerar configuração pelo comando normal flutter build apk --release --split-per-abi; evitar --no-pub e comandos Flutter concorrentes.
 
 Sincronização global dispensada pelo usuário nesta sessão. Este chat não iniciou novo sync após a dispensa; foram observados checkpoints de outra execução da central, cujo agendamento não foi alterado. Pushes de publicação dos repositórios do Pile, catálogo e downloads pertencem ao pedido explícito de entrega/publicação.
+
+## Update e instalador Windows — 24/10/2026
+
+Distribuição **0.1.1** publicada por pedido explícito final do usuário para concluir e subir aos repositórios e à Clustter. Release: https://github.com/vacilao38/clustter-cores-downloads/releases/tag/pile-v0.1.1. Instalador Windows x64 `.exe`, APKs ARM64/ARM32/x64 e SHA256SUMS.txt públicos. Os cinco assets tiveram tamanho/digest SHA-256 comparado com os arquivos locais e cinco URLs HTTP 200. Versão e downloads oficiais no catálogo/feed. Fontes preservam a visibilidade registrada na central.
+
+Update compartilhado integrado em MaterialApp.builder, dependência Git fixada em bc364d556bae449fc8dec3cf963b73b5a93abe6b. Consulta HTTPS somente de metadados; aviso dentro do app e botão abre a página oficial. Primeiro upgrade é manual para versões antigas sem o componente. Instalador por usuário, caminho/registro estáveis e preservação dos dados de suporte; sem instalação automática.
+
+Validação: análise estática aprovada; testes 27 testes nesta integração; a evolução visual posterior registra 32 testes e duas integrações em docs/VALIDACAO.md. Builds Windows Release e três APKs concluídos. Versão real Windows, versão/códigos Android por ABI, certificado original, permissão INTERNET, zipalign de 16 KiB e alinhamento nativo conferidos. Instalador compartilhado testado em instalação/substituição/desinstalação isolada, preservando arquivo extra. O teste nativo do Chain confirmou versão instalada, aviso Update e destino correto. O cliente HTTPS real leu o feed público dos cinco apps.
+
+Pacotes locais em `pile_app/dist/0.1.1/`, ignorados pelo Git. Não sincronizar APKs/executáveis/credenciais. Próximo passo: testar atualização e uso em Android físico; não há aparelho ou emulador disponível nesta validação. Para release futura, seguir docs/UPDATE.md, preservar assinatura e anunciar só pacotes públicos verificados.

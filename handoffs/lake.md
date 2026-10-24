@@ -18,3 +18,13 @@ Os resultados acima não representam build de release, validação de integraç�
 ## Próximo passo
 
 Continuar o desenvolvimento na branch cadastrada, executando a sincronização ao iniciar e encerrar. Para atualizar APKs já instalados, transferir com segurança a chave de assinatura original; não gerar substituta. Validar o aplicativo em Android físico antes de declarar essa plataforma testada. Publicação de aplicativo, download ou alteração na vitrine depende de pedido explícito.
+
+## Update e instalador Windows — 24/10/2026
+
+Distribuição **1.2.1** publicada por pedido explícito final do usuário para concluir e subir aos repositórios e à Clustter. Release: https://github.com/vacilao38/clustter-cores-downloads/releases/tag/lake-v1.2.1. Instalador Windows x64 `.exe`, APKs ARM64/ARM32/x64 e SHA256SUMS.txt públicos. Os cinco assets tiveram tamanho/digest SHA-256 comparado com os arquivos locais e cinco URLs HTTP 200. Versão e downloads oficiais no catálogo/feed. Fontes preservam a visibilidade registrada na central.
+
+Update compartilhado integrado em MaterialApp.builder, dependência Git fixada em bc364d556bae449fc8dec3cf963b73b5a93abe6b. Consulta HTTPS somente de metadados; aviso dentro do app e botão abre a página oficial. Primeiro upgrade é manual para versões antigas sem o componente. Instalador por usuário, caminho/registro estáveis e preservação dos dados de suporte; sem instalação automática.
+
+Validação: análise estática aprovada; testes 40 aprovados e 1 ignorado previsto. Builds Windows Release e três APKs concluídos. Versão real Windows, versão/códigos Android por ABI, certificado original, permissão INTERNET, zipalign de 16 KiB e alinhamento nativo conferidos. Instalador compartilhado testado em instalação/substituição/desinstalação isolada, preservando arquivo extra. O teste nativo do Chain confirmou versão instalada, aviso Update e destino correto. O cliente HTTPS real leu o feed público dos cinco apps.
+
+Pacotes locais em `lake_app/dist/1.2.1/`, ignorados pelo Git. Não sincronizar APKs/executáveis/credenciais. Próximo passo: testar atualização e uso em Android físico; não há aparelho ou emulador disponível nesta validação. Para release futura, seguir docs/UPDATE.md, preservar assinatura e anunciar só pacotes públicos verificados.

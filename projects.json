@@ -14,7 +14,8 @@
         "Visual Studio C++ (Desktop development with C++) para Windows",
         "Android SDK e Java 21 para Android",
         "Android NDK 29.0.13113456",
-        "Modelos versionados em assets/models; utilitários via tool/prepare-windows.ps1"
+        "Modelos versionados em assets/models; utilitários via tool/prepare-windows.ps1",
+        "Protocolo clustter_update com commit Git fixado; instalador Windows via clustter_update/tool/build-installer.py"
       ],
       "setup": [
         "flutter pub get",
@@ -38,7 +39,8 @@
       "requirements": [
         "Flutter 3.44.1 / Dart 3.12.1",
         "Visual Studio C++ (Desktop development with C++) para Windows",
-        "Android SDK e Java 21 para Android"
+        "Android SDK e Java 21 para Android",
+        "Protocolo clustter_update com commit Git fixado; instalador Windows via clustter_update/tool/build-installer.py"
       ],
       "setup": [
         "flutter pub get"
@@ -62,7 +64,8 @@
         "Flutter 3.44.1 / Dart 3.12.1",
         "flutter_webrtc 1.6.2+hotfix.4; toolchain C++ para o plugin Windows e credencial TURN pessoal para validar relay",
         "Visual Studio C++ (Desktop development with C++) para Windows",
-        "Android SDK e Java 21 para Android"
+        "Android SDK e Java 21 para Android",
+        "Protocolo clustter_update com commit Git fixado; instalador Windows via clustter_update/tool/build-installer.py"
       ],
       "setup": [
         "flutter pub get"
@@ -84,7 +87,8 @@
       "requirements": [
         "Flutter 3.44.1 / Dart 3.12.1",
         "Visual Studio C++ (Desktop development with C++) para Windows",
-        "Android SDK e Java 21 para Android"
+        "Android SDK e Java 21 para Android",
+        "Protocolo clustter_update com commit Git fixado; instalador Windows via clustter_update/tool/build-installer.py"
       ],
       "setup": [
         "flutter pub get"
@@ -234,15 +238,16 @@
       "visibility": "public",
       "allow_dist": true,
       "requirements": [
-        "Site estático sem build",
-        "Node.js para serve.mjs (prévia local opcional)"
+        "Site estático com catálogo e feed gerados por Node.js",
+        "Node.js para tool/build-catalog.mjs e serve.mjs"
       ],
       "setup": [
         "Consultar README.md; dist/ contém os arquivos estáticos editáveis"
       ],
       "validate": [
-        "node --check serve.mjs",
-        "Conferir prévia local sem publicar"
+        "node tool/build-catalog.mjs",
+        "node --check dist/catalog-app.js",
+        "node --check serve.mjs"
       ],
       "url": "https://github.com/vacilao38/clustter-cores-site.git",
       "branch": "main",
@@ -257,7 +262,8 @@
       "requirements": [
         "Flutter 3.44.1 / Dart 3.12.1",
         "Visual Studio C++ Desktop e Windows SDK para Windows 10/11 x64",
-        "Android SDK 36+, Java 21 e NDK da distribuição Flutter; Android 7+"
+        "Android SDK 36+, Java 21 e NDK da distribuição Flutter; Android 7+",
+        "Protocolo clustter_update com commit Git fixado; instalador Windows via clustter_update/tool/build-installer.py"
       ],
       "setup": [
         "flutter pub get --enforce-lockfile"
@@ -274,6 +280,28 @@
       "handoff": "handoffs/pile.md",
       "scope": "clustter",
       "privacy_reason": "Pedido explicito do usuario em 24/10/2026: manter Pile privado por risco de LGPD. Publicacao do aplicativo e downloads na Clustter autorizada separadamente na mesma data."
+    },
+    {
+      "path": "clustter_update",
+      "id": "update",
+      "validate": [
+        "flutter analyze --no-pub",
+        "flutter test --no-pub"
+      ],
+      "handoff": "handoffs/update.md",
+      "visibility": "public",
+      "requirements": [
+        "Flutter 3.44.1 / Dart 3.12.1",
+        "Python 3.10+ para empacotamento Windows",
+        "NSIS 3.13 portátil oficial e CRT redistribuível do toolchain para gerar instaladores"
+      ],
+      "url": "https://github.com/vacilao38/clustter-update.git",
+      "branch": "main",
+      "setup": [
+        "flutter pub get --enforce-lockfile"
+      ],
+      "repo": "clustter-update",
+      "scope": "clustter"
     }
   ],
   "default_visibility_scope": "clustter"

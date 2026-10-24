@@ -1,6 +1,7 @@
 # Clustter: trabalho entre computadores
 
 - Usar UTF-8 em código e documentação.
+- Todo app Clustter novo e toda nova distribuição devem seguir o protocolo **Update** em `docs/UPDATE.md`: componente compartilhado, aviso dentro do app, página oficial de download e versão do catálogo sincronizada com pacotes realmente publicados. Windows deve oferecer instalador `.exe` por usuário com identidade estável e preservação de dados. Não executar instalação automática ou publicar versões inexistentes no feed.
 - Esta central contém inventário, instruções, pendências e o sincronizador; código de aplicativos fica nos respectivos repositórios.
 - Antes de trabalhar: executar `clustter.cmd sync`, ler `PENDENCIAS.md` e o handoff do projeto. Conferir `.local/status.json` se algum repositório falhar.
 - Depois de trabalhar: atualizar `handoffs/<id>.md` com resultado, testes e próximo passo; executar `clustter.cmd sync`. Não declarar sincronizado se o comando falhar.

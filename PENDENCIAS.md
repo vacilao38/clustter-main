@@ -25,3 +25,11 @@ Atualizar este arquivo quando surgir algo necessário para continuar em outro co
 Por pedido do usuário, a execução periódica de três minutos foi removida. Manter somente sincronização ao entrar no Windows e ao iniciar/encerrar o trabalho. Instalações antigas aplicam a migração local ao receber a atualização da central.
 
 Atualize `handoffs/<id>.md`: resultado, validação realizada, limitações e próximo passo. Execute `clustter.cmd sync` e confira o resultado. Se houver conflito ou indisponibilidade, registre a pendência e preserve o checkpoint.
+
+## Update e instaladores — 24/10/2026
+
+- [x] Padrão Update documentado e integrado em Folk, Lake, Chain, Noon e Pile; pacote genérico em repositório próprio e inventário.
+- [x] Análise/testes e builds Windows/Android concluídos. Os cinco instaladores `.exe` e quinze APKs foram publicados após autorização explícita final; assinaturas anteriores preservadas, hashes/tamanhos e URLs verificados. Os registros de compilação pendente anteriores são históricos e foram superados para estas versões.
+- [x] Catálogo com cinco destaques/versões e feed público atualizado para Folk 1.0.1, Lake 1.2.1, Chain 1.1.1, Noon 0.1.1 e Pile 0.1.1.
+- [ ] Testar upgrade sobre instalação existente e uso no Android físico. Credencial TURN entre redes continua por aparelho, fora dos pacotes e do sincronizador.
+- [ ] Primeiro upgrade das versões anteriores ao Update é manual. Para futuras versões, publicar/verificar pacotes antes de mudar o feed.

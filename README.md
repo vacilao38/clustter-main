@@ -66,6 +66,8 @@ Se duas máquinas alterarem o mesmo trecho, o checkpoint é preservado, o merge 
 
 ## Adicionar projeto
 
+Todos os novos apps e novas distribuições seguem o [protocolo Update](docs/UPDATE.md), incluindo aviso no app, catálogo versionado e instalador `.exe` por usuário no Windows. A implementação compartilhada fica no repositório próprio `clustter-update`.
+
 Crie o repositório próprio, prepare um `.gitignore` que exclua dados e builds, envie o código revisado e acrescente uma entrada em `projects.json`. Cadastre a branch usada para continuar o trabalho, dependências, comandos e o handoff. A próxima sincronização recupera o projeto no outro PC.
 
 ## Remover o agendamento
