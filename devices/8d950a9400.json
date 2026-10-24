@@ -52,11 +52,11 @@
   "site": {
     "status": "sincronizado",
     "branch": "main",
-    "head": "075e9263cfc4c512767367a9a36631000b77b6fb"
+    "head": "b8478b178ca143cb1beeb7bdda16b7398a5d84f8"
   },
   "pile": {
     "status": "sincronizado",
     "branch": "main",
-    "head": "653dc2d44e6b3590b9ba4fdff65530c580753f28"
+    "head": "8f184a51896ec1e5f09c51ffac6873367af6bdaa"
   }
 }
