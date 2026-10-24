@@ -1,57 +1,46 @@
 {
   "folk": {
-    "status": "sincronizado",
-    "branch": "main",
-    "head": "23ee8b3090aa0d82d424c1054af498fdf28fcf61"
+    "status": "pendente",
+    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\folk_app (código 128). Consulte o Git local."
   },
   "lake": {
-    "status": "sincronizado",
-    "branch": "main",
-    "head": "e8b3230d71ee23e9c2784bfcb070de18be955e2c"
+    "status": "pendente",
+    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\lake_app (código 128). Consulte o Git local."
   },
   "chain": {
-    "status": "sincronizado",
-    "branch": "main",
-    "head": "893fa12b4c0789fbdefb561b52d9e1a8654ab761"
+    "status": "pendente",
+    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\chain_app (código 128). Consulte o Git local."
   },
   "noon": {
-    "status": "sincronizado",
-    "branch": "main",
-    "head": "2e0ffd824d3f7ead09ba9d84f09a1bdb286ce4cb"
+    "status": "pendente",
+    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\noon_app (código 128). Consulte o Git local."
   },
   "cofre": {
-    "status": "sincronizado",
-    "branch": "main",
-    "head": "8e4f707c7054a7a46cd6e937386c35aeeaac0b34"
+    "status": "pendente",
+    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\cofre_imagens_app (código 128). Consulte o Git local."
   },
   "memoteca": {
-    "status": "sincronizado",
-    "branch": "main",
-    "head": "3c8b3e4b4243006ad2a8369f1fc82558a6feac62"
+    "status": "pendente",
+    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\memoteca_app (código 128). Consulte o Git local."
   },
   "colaboradores": {
-    "status": "sincronizado",
-    "branch": "main",
-    "head": "5bf1f390169cc58694e790f8848844465f5bb1c6"
+    "status": "pendente",
+    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\acompanhamento_colaboradores_app (código 128). Consulte o Git local."
   },
   "rota-clara": {
-    "status": "sincronizado",
-    "branch": "main",
-    "head": "86aab1b791448f78150aac50eafe551e2131b583"
+    "status": "pendente",
+    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\fora_de_rota_winui (código 128). Consulte o Git local."
   },
   "gerador-kml": {
-    "status": "sincronizado",
-    "branch": "main",
-    "head": "01ae6a7344914e22614a3c06b88ac0632f7bfa7d"
+    "status": "pendente",
+    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\gerador_kml_work (código 128). Consulte o Git local."
   },
   "localizador-rotas": {
-    "status": "sincronizado",
-    "branch": "main",
-    "head": "159a20d4c0f1b9a0b979ace282fbd48cb2d0e941"
+    "status": "pendente",
+    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\localizador_rotas_app (código 128). Consulte o Git local."
   },
   "site": {
-    "status": "sincronizado",
-    "branch": "main",
-    "head": "06ebb19418f94b91490ab2bc7dac27d64990dd2c"
+    "status": "pendente",
+    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\tools_pool_site (código 128). Consulte o Git local."
   }
 }
