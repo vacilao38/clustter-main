@@ -12,7 +12,7 @@
   "chain": {
     "status": "sincronizado",
     "branch": "main",
-    "head": "424ee73016c901fd5920ba33924b81f9a94fe592"
+    "head": "8b406712eb983ebdf42bc24854ebbd5f92d97b27"
   },
   "noon": {
     "status": "sincronizado",
@@ -55,7 +55,8 @@
     "head": "06ebb19418f94b91490ab2bc7dac27d64990dd2c"
   },
   "pile": {
-    "status": "pendente",
-    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\pile_app (código 2). Consulte o Git local."
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "45b0fc7cc361e9b2b95a9d43ad89b8cc4b05ba62"
   }
 }
