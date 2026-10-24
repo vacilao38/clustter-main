@@ -2,6 +2,8 @@
 
 ## Evolução retomada após o reset — 24/10/2026
 
+Código salvo e enviado ao repositório privado: `88ae918284a8f686635ae5c4fc989ee06d8919c5`; HEAD remoto conferido igual ao local, árvore do Pile limpa. Capturas e medições também copiadas para `outputs/pile-evolution-2026-10-24/`. Builds locais finais Windows/Android aprovados. A central recebeu somente commits locais destes registros, sem sincronização global.
+
 Pedido executado após 16h47 São Paulo. Galeria/lista com seleção e filtros, busca por nomes/caminhos/etiquetas (Cute validado após reiniciar), índice em memória, navegação por pastas inclusive vazias, criar pasta no contexto, mover/renomear com prévia e desfazer, prévia com zoom e vídeo local. Ações compactas, ícones Lucide leves, marca de pasta/pilha. IA secundária e opcional preservada. Código privado confirmado pela API. Nada desta evolução foi publicado no catálogo/release, e não houve sync global.
 
 Figurinhas: revisão de 3–30 imagens estáticas, WebP/capa convertidos no Android, até dez pacotes privados, ContentProvider/intent oficiais para WhatsApp/Business. Só a ação Adicionar autoriza expor o pacote. Sem leitura de conversas/credenciais/bancos privados. Confirmação real ainda pendente por ausência de Android conectado/AVD. Windows só revisa, sem alegar importação. Vídeos/animações e edição/remoção de pacotes não implementados.
