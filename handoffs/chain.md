@@ -2,7 +2,7 @@
 
 ## Estado — 24/10/2026
 
-Desenvolvimento 1.1.0+2 em `chain_app`, repositório próprio público `vacilao38/chain`, branch `main`. Downloads 1.0 da Clustter não foram atualizados nesta sessão.
+Desenvolvimento 1.1.0+2 em `chain_app`, repositório próprio **privado** `vacilao38/chain`, branch `main`. Em 24/10/2026 o usuário pediu explicitamente essa alteração por preocupação com privacidade e proteção de dados; API do GitHub confirmou `visibility=private` e `private=true`. Exceção registrada no inventário. Não reabrir sem novo pedido explícito. Downloads 1.0 da Clustter não foram atualizados nesta sessão e continuam no repositório público de distribuição.
 
 - Botão de copiar endereço visível em cada link, incluindo favoritos e busca. Itens estreitos usam texto + ícone abaixo do conteúdo; itens largos usam ícone lateral. Falhas da área de transferência passam pelo tratamento de erro.
 - WebRTC nativo via flutter_webrtc 1.6.2+hotfix.4, com sinalização PeerServer Cloud e prioridade ao caminho direto. TCP local, protocolo AES-256-GCM, push/pull por revisão e confiança armazenada preservados. Convites novos incluem ID de internet; antigos continuam locais.

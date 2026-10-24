@@ -56,7 +56,8 @@
       "id": "chain",
       "path": "chain_app",
       "repo": "chain",
-      "visibility": "public",
+      "visibility": "private",
+      "privacy_reason": "Pedido explícito do usuário em 24/10/2026 para manter o código do Chain privado por preocupação com privacidade e proteção de dados.",
       "requirements": [
         "Flutter 3.44.1 / Dart 3.12.1",
         "flutter_webrtc 1.6.2+hotfix.4; toolchain C++ para o plugin Windows e credencial TURN pessoal para validar relay",
