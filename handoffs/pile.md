@@ -1,16 +1,14 @@
 # Pile — 24/10/2026
 
-## Prioridade nova — registro para retomada após o reset
+## Evolução retomada após o reset — 24/10/2026
 
-O usuário pediu **apenas registrar agora**, sem alterar o aplicativo ou a versão publicada. Retomada solicitada para **24/10/2026 às 16h47, após o reset (America/Sao_Paulo)**. Especificação completa em `pile_app/docs/DIRECAO-2026-10-24.md`; ler esse arquivo antes de continuar o desenvolvimento.
+Pedido executado após 16h47 São Paulo. Galeria/lista com seleção e filtros, busca por nomes/caminhos/etiquetas (Cute validado após reiniciar), índice em memória, navegação por pastas inclusive vazias, criar pasta no contexto, mover/renomear com prévia e desfazer, prévia com zoom e vídeo local. Ações compactas, ícones Lucide leves, marca de pasta/pilha. IA secundária e opcional preservada. Código privado confirmado pela API. Nada desta evolução foi publicado no catálogo/release, e não houve sync global.
 
-Nova intenção: gerenciador e organizador de arquivos de uso cotidiano, como alternativa prática a parte do Explorer/gerenciador Android. IA deixa de ser o foco. Priorizar imagens/vídeos, busca rápida por categorias/etiquetas (exemplo “Imagens Cute” / etiqueta “Cute”), lista e galeria, miniaturas/prévias ágeis, navegação clara, barra de ações compacta e ícones minimalistas de traço leve. Pesquisar UI/UX e referências atuais Apple (Arquivos/Finder, iOS/macOS) antes do redesign. Refazer o ícone para comunicar gerenciador de arquivos e pilha.
+Figurinhas: revisão de 3–30 imagens estáticas, WebP/capa convertidos no Android, até dez pacotes privados, ContentProvider/intent oficiais para WhatsApp/Business. Só a ação Adicionar autoriza expor o pacote. Sem leitura de conversas/credenciais/bancos privados. Confirmação real ainda pendente por ausência de Android conectado/AVD. Windows só revisa, sem alegar importação. Vídeos/animações e edição/remoção de pacotes não implementados.
 
-Também foi solicitado para a retomada o fluxo de figurinhas WhatsApp: selecionar arquivos ou pasta, preparar/revisar e importar/adicionar com poucos passos. Pesquisar meios oficiais, formatos e limites por plataforma, sem prometer que exportação de arquivos equivale a importação no WhatsApp. Manter código privado e processamento local. Não publicar nova atualização automaticamente.
+Validação: análise sem problemas, 32 testes; integrações Windows de organizar/desfazer e galeria/mídia/criar pasta/mover preservando tags passaram separadamente. O runner falhou ao iniciar o segundo teste em execução conjunta; execução separada corrigiu o bloqueio de inicialização. Builds locais Windows e APKs por ABI. Capturas 360/800/1440 e prévias em `pile_app/.local/design/`. Busca 10 mil entradas: 2.51 ms/consulta média em debug, índice 125.56 ms; não é benchmark Android ou 10 mil imagens físicas. Miniatura fria 391.40 ms, cache 0.159 ms. Ver `pile_app/docs/EVOLUCAO-VISUAL.md` e `docs/VALIDACAO.md` para fontes e limites.
 
-O estado implementado e publicado abaixo permanece sendo o da versão 0.1.0; a nova direção ainda não foi implementada.
-
-Retomada única ativa nesta conversa: **Retomar evolução do Pile após o reset**, ID `retomar-evolu-o-do-pile-ap-s-o-reset`, programada para 24/10/2026 às 16h47min40s (São Paulo), após o reset consultado de 16h47min31s. Não duplicar o agendamento. Alterações concorrentes em código/dependências foram observadas e preservadas; esta etapa alterou somente documentação e criou o agendamento.
+Integração Update e metadados 0.1.1+2 já estavam no workspace antes da retomada: preservados e validados juntos. Outras alterações da central não pertencem a esta etapa e devem permanecer fora do seu commit. Automação única `retomar-evolu-o-do-pile-ap-s-o-reset` encerrada; não duplicar/reativar. Próximo passo necessário: conectar Android com WhatsApp/Business e validar SAF, recusa/adição do pacote, vídeo/EXIF e tablet. Futuro gerenciador: copiar, lixeira e gestão de pastas/pacotes ainda não cobertos. Não anunciar substituição integral do Explorer.
 
 App em `pile_app/`, repositório próprio **privado** https://github.com/vacilao38/pile, branch `main`. Exceção privada solicitada explicitamente pelo usuário em 24/10/2026 por risco de LGPD, registrada em projects.json. O usuário também autorizou a publicação do aplicativo e dos downloads na Clustter na mesma data.
 
