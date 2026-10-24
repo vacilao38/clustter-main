@@ -15,6 +15,8 @@ Atualizar este arquivo quando surgir algo necessário para continuar em outro co
 
 ### Pile — 24/10/2026
 
+- [ ] Retomar em 24/10/2026 às 16h47, após reset (São Paulo): pesquisar e executar a nova direção de gerenciador visual de arquivos, com busca por etiquetas, galeria/prévias de imagens e vídeos, redesign inspirado em referências Apple, ícones leves, novo ícone de pasta/pilha e integração oficial de figurinhas WhatsApp. Registro detalhado em `pile_app/docs/DIRECAO-2026-10-24.md`; agora foram alterados somente documentos, sem nova publicação.
+
 - [x] Novo app cadastrado em `projects.json`, com repositório próprio, dependências, comandos e `handoffs/pile.md`. Repositório privado por pedido de 24/10/2026 (risco de LGPD). Pile e downloads publicados na Clustter por autorização explícita posterior na mesma sessão.
 - [x] Sincronização entre computadores dispensada expressamente pelo usuário nesta sessão. A tentativa inicial falhou por restrição de rede; a nova tentativa foi interrompida após essa instrução. Não declarar sincronizado.
 - [ ] Validar Pile em Android físico (celular/tablet), principalmente permissões e operações SAF. IA real depende de chave e consentimento por lote; testes desta sessão foram locais e sintéticos.

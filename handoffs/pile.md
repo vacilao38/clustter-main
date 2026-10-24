@@ -1,5 +1,17 @@
 # Pile — 24/10/2026
 
+## Prioridade nova — registro para retomada após o reset
+
+O usuário pediu **apenas registrar agora**, sem alterar o aplicativo ou a versão publicada. Retomada solicitada para **24/10/2026 às 16h47, após o reset (America/Sao_Paulo)**. Especificação completa em `pile_app/docs/DIRECAO-2026-10-24.md`; ler esse arquivo antes de continuar o desenvolvimento.
+
+Nova intenção: gerenciador e organizador de arquivos de uso cotidiano, como alternativa prática a parte do Explorer/gerenciador Android. IA deixa de ser o foco. Priorizar imagens/vídeos, busca rápida por categorias/etiquetas (exemplo “Imagens Cute” / etiqueta “Cute”), lista e galeria, miniaturas/prévias ágeis, navegação clara, barra de ações compacta e ícones minimalistas de traço leve. Pesquisar UI/UX e referências atuais Apple (Arquivos/Finder, iOS/macOS) antes do redesign. Refazer o ícone para comunicar gerenciador de arquivos e pilha.
+
+Também foi solicitado para a retomada o fluxo de figurinhas WhatsApp: selecionar arquivos ou pasta, preparar/revisar e importar/adicionar com poucos passos. Pesquisar meios oficiais, formatos e limites por plataforma, sem prometer que exportação de arquivos equivale a importação no WhatsApp. Manter código privado e processamento local. Não publicar nova atualização automaticamente.
+
+O estado implementado e publicado abaixo permanece sendo o da versão 0.1.0; a nova direção ainda não foi implementada.
+
+Retomada única ativa nesta conversa: **Retomar evolução do Pile após o reset**, ID `retomar-evolu-o-do-pile-ap-s-o-reset`, programada para 24/10/2026 às 16h47min40s (São Paulo), após o reset consultado de 16h47min31s. Não duplicar o agendamento. Alterações concorrentes em código/dependências foram observadas e preservadas; esta etapa alterou somente documentação e criou o agendamento.
+
 App em `pile_app/`, repositório próprio **privado** https://github.com/vacilao38/pile, branch `main`. Exceção privada solicitada explicitamente pelo usuário em 24/10/2026 por risco de LGPD, registrada em projects.json. O usuário também autorizou a publicação do aplicativo e dos downloads na Clustter na mesma data.
 
 ## Implementado e validado
