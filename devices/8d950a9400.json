@@ -53,5 +53,9 @@
     "status": "sincronizado",
     "branch": "main",
     "head": "06ebb19418f94b91490ab2bc7dac27d64990dd2c"
+  },
+  "pile": {
+    "status": "pendente",
+    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\pile_app (código 2). Consulte o Git local."
   }
 }
