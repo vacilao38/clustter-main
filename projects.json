@@ -247,6 +247,30 @@
       "branch": "main",
       "handoff": "handoffs/site.md",
       "scope": "clustter"
+    },
+    {
+      "id": "pile",
+      "path": "pile_app",
+      "repo": "pile",
+      "visibility": "public",
+      "requirements": [
+        "Flutter 3.44.1 / Dart 3.12.1",
+        "Visual Studio C++ Desktop e Windows SDK para Windows 10/11 x64",
+        "Android SDK 36+, Java 21 e NDK da distribuição Flutter; Android 7+"
+      ],
+      "setup": [
+        "flutter pub get --enforce-lockfile"
+      ],
+      "validate": [
+        "flutter analyze",
+        "flutter test",
+        "flutter build windows --release",
+        "flutter build apk --debug"
+      ],
+      "url": "https://github.com/vacilao38/pile.git",
+      "branch": "main",
+      "handoff": "handoffs/pile.md",
+      "scope": "clustter"
     }
   ],
   "default_visibility_scope": "clustter"

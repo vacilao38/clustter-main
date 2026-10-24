@@ -12,6 +12,12 @@ Atualizar este arquivo quando surgir algo necessário para continuar em outro co
 
 ## Ao encerrar uma sessão
 
+### Pile — 24/10/2026
+
+- [x] Novo app cadastrado em `projects.json`, com repositório próprio, dependências, comandos e `handoffs/pile.md`. Código público pelo padrão Clustter; catálogo/downloads não autorizados.
+- [x] Sincronização entre computadores dispensada expressamente pelo usuário nesta sessão. A tentativa inicial falhou por restrição de rede; a nova tentativa foi interrompida após essa instrução. Não declarar sincronizado.
+- [ ] Validar Pile em Android físico (celular/tablet), principalmente permissões e operações SAF. IA real depende de chave e consentimento por lote; testes desta sessão foram locais e sintéticos.
+
 Por pedido do usuário, a execução periódica de três minutos foi removida. Manter somente sincronização ao entrar no Windows e ao iniciar/encerrar o trabalho. Instalações antigas aplicam a migração local ao receber a atualização da central.
 
 Atualize `handoffs/<id>.md`: resultado, validação realizada, limitações e próximo passo. Execute `clustter.cmd sync` e confira o resultado. Se houver conflito ou indisponibilidade, registre a pendência e preserve o checkpoint.
