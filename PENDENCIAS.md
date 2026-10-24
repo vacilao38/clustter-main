@@ -7,7 +7,7 @@ Atualizar este arquivo quando surgir algo necessário para continuar em outro co
 - [x] Executado `clustter.cmd doctor` no início e instalados os SDKs de Folk, Lake, Chain e Noon. Preparação, análises e testes Flutter passaram nos quatro apps. O usuário encerrou testes adicionais; versões, falhas corrigidas e limites em `devices/521caa2563-setup.md`.
 - [ ] Para atualizar APKs já instalados, transferir com segurança as mesmas chaves de assinatura. Os READMEs atuais descrevem assinatura de desenvolvimento; gerar uma nova chave em outro PC pode impedir atualização sobre a instalação existente. Nunca versionar essas chaves.
 - [x] Modelos do Folk presentes no repositório, dependências Flutter recuperadas com lockfile preservado e FFmpeg/FFprobe preparados com SHA-256 conferido.
-- [ ] Compilação e validação de integrações nativas continuam pendentes. O usuário encerrou os testes após análise e testes Flutter aprovados nos quatro apps; nenhuma compilação adicional foi iniciada.
+- [ ] Compilação e validação de integrações nativas continuam pendentes nos demais apps conforme a preparação anterior. Em 24/10 o usuário retomou o desenvolvimento do Chain: integração Windows WebRTC direto e TURN forçado passou com credencial Metered pessoal. Ver `handoffs/chain.md`; ainda falta Android físico e ensaio celular/PC nas redes reais.
 - [ ] Validar uso no Android físico onde os READMEs registram essa validação pendente.
 
 ## Ao encerrar uma sessão

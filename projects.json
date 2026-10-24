@@ -59,6 +59,7 @@
       "visibility": "public",
       "requirements": [
         "Flutter 3.44.1 / Dart 3.12.1",
+        "flutter_webrtc 1.6.2+hotfix.4; toolchain C++ para o plugin Windows e credencial TURN pessoal para validar relay",
         "Visual Studio C++ (Desktop development with C++) para Windows",
         "Android SDK e Java 21 para Android"
       ],
