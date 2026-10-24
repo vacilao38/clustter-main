@@ -252,7 +252,7 @@
       "id": "pile",
       "path": "pile_app",
       "repo": "pile",
-      "visibility": "public",
+      "visibility": "private",
       "requirements": [
         "Flutter 3.44.1 / Dart 3.12.1",
         "Visual Studio C++ Desktop e Windows SDK para Windows 10/11 x64",
@@ -271,7 +271,8 @@
       "url": "https://github.com/vacilao38/pile.git",
       "branch": "main",
       "handoff": "handoffs/pile.md",
-      "scope": "clustter"
+      "scope": "clustter",
+      "privacy_reason": "Pedido explicito do usuario em 24/10/2026: manter Pile privado por risco de LGPD. Publicacao do aplicativo e downloads na Clustter autorizada separadamente na mesma data."
     }
   ],
   "default_visibility_scope": "clustter"

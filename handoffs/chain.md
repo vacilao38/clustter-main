@@ -19,12 +19,26 @@ O usuário autorizou auxílio mínimo com P2P prioritário, PeerServer Cloud (`0
 - O primeiro ensaio com Open Relay público falhou por timeout; TCP/TLS e UDP nos endpoints verificados não responderam nesta rede. Não usar sucesso P2P como evidência de funcionamento desse endpoint público.
 - A repetição nativa final usou leitura e gravação reais via flutter_secure_storage em uma entrada temporária isolada, removida no final. Os dois cenários passaram novamente; a credencial não foi deixada na configuração de produção.
 - `flutter build windows --release --no-pub`: aprovado; executável local `chain_app/build/windows/x64/runner/Release/chain.exe`, ProductVersion **1.1.0+2**. Não é publicação de download; manter DLLs e pasta data junto dele.
-- Android físico, duas máquinas físicas em redes distintas e atualização de APK com a assinatura original ainda não validados. SDK Android desta máquina tem licenças pendentes; não houve aceite automático nem geração de chave de assinatura substituta.
+- Android físico e duas máquinas físicas em redes distintas ainda não validados. A preparação Android posterior desta sessão está registrada abaixo. Não houve aceite automático de novas licenças nem geração de chave substituta.
 
 Fontes, operação e comandos detalhados em `chain_app/docs/NETWORK.md`. Capturas e resultados locais em `chain_app/artifacts/`, ignorados pelo sincronizador.
 
+## Android preparado — 24/10/2026
+
+O usuário pediu concluir a preparação Android. A chave local existente foi comparada ao APK 1.0 publicado: os certificados coincidem (SHA-256 público `ffe345ae284d16df6e57a7fa3646210f4cad3a52282a215aaed67c86aece1d76`). Não foi necessária outra chave. O Gradle agora valida esse certificado antes da release e recusa chave ausente/diferente. Configuração opcional `android/key.properties` é ignorada pelo Git. O teste com caminho de chave ausente falhou como esperado; após remover a configuração temporária, a chave original passou.
+
+- Manifesto: adicionados `ACCESS_NETWORK_STATE` e `CHANGE_NETWORK_STATE` para WebRTC. Removidas permissões transitivas de Bluetooth legado/áudio. `MainActivity` desativa o gerenciamento de áudio do plugin antes de registrá-lo, pois Chain usa apenas DataChannel.
+- `flutter build apk --release --split-per-abi`: aprovado. `com.clustter.chain`, minSdk 24, target/compileSdk 36, 1.1.0, códigos 1002 ARM32 / 2002 ARM64 / 4002 x64; superiores aos respectivos códigos 1.0. NDK 28.2.13676358, JDK 21 configurado pelo Flutter.
+- Build com `--no-pub` falhou inicialmente pelo registrador Android obsoleto incluindo `integration_test`. Regeneração por build normal resolveu; lockfile preservado. Não editar o registrador nem executar pub get concorrente ao build. Fonte/diagnóstico em `chain_app/docs/ANDROID.md`.
+- R8 ativo. APKs finais verificados por `tool/package-android.ps1`: pacote, versões por ABI, arquitetura, assinatura/certificado original, ausência de depuração/permissões de mídia e zipalign de 16 KiB. `tool/verify-apk-native.py` confirmou LOAD e RELRO de 64 bits, incluindo Flutter, JNI e WebRTC. RELRO em segmento próprio é válido mesmo sem terminar no limite de 16 KiB; regra completa da documentação Android aplicada.
+- Pacotes locais e SHA-256 em `chain_app/dist/android-1.1.0+2/`; ARM64 30,5 MB, ARM32 22,8 MB, x64 35,5 MB conforme Flutter. Não incluídos no Git nem publicados no catálogo. Preferir ARM64 em celulares atuais.
+- Análise final sem problemas; 13 testes Flutter passaram novamente. Sem dispositivo/emulador no ADB: instalação sobre 1.0, seletores SAF e P2P/TURN no Android físico continuam pendentes.
+- Avisos de migração futura para Kotlin embutido permanecem no toolchain fixado, sem falha no build atual. Não desativar R8 nem atualizar Flutter/AGP sem rever os plugins.
+
+O sync inicial enviou Chain/central, mas falhou no Pile ainda sem commit inicial, pertencente a outro trabalho. Ao final da preparação, Pile já apresentava branch acompanhando origin/main; executar e conferir o sync final, sem alterar código desse projeto.
+
 ## Próximo passo
 
-Usar a configuração TURN pessoal em cada aparelho atualizado e testar celular/PC nas duas redes reais. Para atualizar APK existente, transferir com segurança a chave de assinatura original; não gerar substituta. Validar Android físico antes de declarar a plataforma testada. A configuração atual é pessoal por dispositivo. Distribuição atualizada e mudança na vitrine exigem escopo de publicação autorizado.
+Instalar o APK adequado sobre a versão 1.0, sem desinstalar/limpar dados, e validar a biblioteca e confiança preservadas em Android físico. Usar a configuração TURN pessoal em cada aparelho atualizado e testar celular/PC nas duas redes reais. Esta máquina já possui a chave original compatível; em outro PC, transferi-la por canal seguro e configurar key.properties, sem gerar substituta. A configuração TURN é pessoal por dispositivo. Downloads públicos continuam 1.0; distribuição atualizada e mudança na vitrine exigem escopo de publicação autorizado.
 
 Executar `clustter.cmd sync` ao iniciar e terminar. Checkpoint do código não é release.
