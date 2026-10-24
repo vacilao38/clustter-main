@@ -12,8 +12,10 @@ Documentação/fontes em README.md, docs/DECISOES.md e docs/VALIDACAO.md do app.
 
 ## Validação
 
-25 testes de domínio/IO/widgets aprovados: arquivos sintéticos reais Windows, colisões, desfazer, recuperação, duplicados, regras, snapshots danificados, EXIF e layouts 360/800/1440 px com texto 1,4. Builds Windows release e Android debug gerados. Tela Windows renderizada inspecionada. Consultar docs/VALIDACAO.md do app para a passagem final e testes posteriores.
+27 testes de domínio/IO/widgets aprovados: arquivos sintéticos reais Windows, colisões, desfazer, recuperação, duplicados, regras, snapshots danificados, EXIF e layouts 360/800/1440 px com texto 1,4. Builds Windows release, Android debug e Android release universal e por arquitetura gerados (ARM64: 18,2 MB). Um teste de integração Windows também passou pelo fluxo organizar/desfazer real na interface. Para Android release, usar flutter build apk --release com regeneração normal dos plugins, evitando --no-pub depois de testes. Tela Windows renderizada inspecionada. Consultar docs/VALIDACAO.md do app para a passagem final e testes posteriores.
 
 ## Próximo passo
 
 Validar SAF em celular/tablet: concessão/recusa, acesso persistente, cópia/desfazer, rotação e interrupções. Não há dispositivo ou AVD disponível. Testar LLM com lote sintético, chave e consentimento, incluindo cota/disponibilidade do modelo. Medir desempenho em bibliotecas maiores e preparar assinatura de distribuição antes de publicar, somente por pedido explícito. Sem sincronização nesta sessão por decisão do usuário.
+
+Observação: outra execução da central gerou checkpoints durante esta tarefa. Este chat não iniciou nova sincronização após a dispensa; não alterou o agendamento nem interrompeu trabalhos de outros chats.
