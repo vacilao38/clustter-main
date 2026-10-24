@@ -15,6 +15,8 @@ Atualizar este arquivo quando surgir algo necessário para continuar em outro co
 
 ### Pile — 24/10/2026
 
+- [x] Após novo pedido explícito, Pile 0.1.1 publicado com instalador Windows, APKs e checksums. Pages built, links HTTP 200 e feed conferidos; fonte do app privada. Detalhes no handoff.
+
 - [x] Retomada após reset executada: gerenciador visual com galeria/lista, busca Cute, prévias, navegação/criação de pastas, mover/desfazer e nova marca. Fluxo oficial Android de figurinhas estáticas implementado e compilado; confirmação em WhatsApp real ainda pendente. Fontes, métricas e testes em `pile_app/docs/EVOLUCAO-VISUAL.md` e `docs/VALIDACAO.md`. Sem nova publicação ou sync global; agendamento único encerrado.
 - [ ] Conectar Android com WhatsApp/Business e validar o pacote preparado, confirmação/recusa, permissões SAF, vídeo/EXIF e layout em tablet. Só então declarar a importação de figurinhas validada no dispositivo.
 
