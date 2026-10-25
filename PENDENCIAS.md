@@ -13,6 +13,12 @@ Atualizar este arquivo quando surgir algo necessário para continuar em outro co
 
 ## Ao encerrar uma sessão
 
+### Pile desktop — 25/10/2026
+
+- [x] Gerenciador Windows 0.2.0 desenvolvido e compilado localmente: navegação por unidades/endereço, correção de renomeação, lote, etiquetas/busca sem acentos, ações diretas/botão direito, cópia/recorte/colar, pastas e Lixeira. 43 testes e integração Windows aprovados, análise sem problemas. Fonte privada, catálogo público anterior preservado; sem sincronização global.
+- [x] Usuário confirmou skill/ponte Codex. Preparação local de prévias e skill, resposta JSON com revisão e hash, sem upload automático. Decisões/fontes/limites em `pile_app/docs/DESKTOP-2026-10-25.md`; continuidade em `handoffs/pile.md`.
+- [ ] Ensaiar a primeira curadoria com lote escolhido pelo usuário e resposta real do Codex/ChatGPT; os testes usam conteúdo e respostas sintéticos. Verificar restauração pela Lixeira e unidades removíveis/rede. Futuro: transporte pelo celular, recorte entre unidades e cópia de pastas.
+
 ### Pile — 24/10/2026
 
 - [x] Após novo pedido explícito, Pile 0.1.1 publicado com instalador Windows, APKs e checksums. Pages built, links HTTP 200 e feed conferidos; fonte do app privada. Detalhes no handoff.

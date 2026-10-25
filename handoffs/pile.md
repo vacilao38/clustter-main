@@ -1,4 +1,21 @@
-# Pile — 24/10/2026
+# Pile
+
+## Desktop 0.2.0 — 25/10/2026
+
+Novo pedido executado: gerenciador visual Windows com navegação por endereço/unidades/pasta acima, leitura de cada pasta visitada e catálogo local por unidade, sem varredura global automática. Migração única dos índices antigos preserva etiquetas/coleções/capas, preferências, regras com escopo e último diário. Corrigido o bug de renomear na raiz (`./nome.ext` recusado); renomeação em lote (numeração/substituição/prefixo), busca sem acentos e por nomes anteriores, atalhos de etiquetas, menu de botão direito, abrir/revelar direto na prévia, copiar/recortar/colar, renomear pastas e Lixeira nativa. Bytes das imagens preservados; operações com plano/diário/desfazer. Recuperação ambígua de cópia exige conferência manual, sem assumir autoria de arquivo preexistente.
+
+Usuário confirmou **skill/ponte para o Codex**, sem banco SQL. Preparar 1–200 prévias sem EXIF/GPS e nomes pessoais, skill por lote em `.agents/skills/pile-image-curator/SKILL.md`, pedido copiado e resposta JSON importada/revisada. Mapa privado/hashes ficam no suporte do app. IDs/schema/hash validados, propostas inicialmente desmarcadas, edição individual e plano antes de aplicar. Não existe upload/login ou abertura automática de sessão do Codex. O contrato pode servir a outro assistente com visão; transporte/interface no celular fica para etapa futura.
+
+Validação: análise final sem problemas, **43 testes aprovados**, integração Windows nativa aprovada (botão direito/renomear, cópia+SHA-256, IFileOperation ao desfazer cópia, pasta renomeada/desfeita, lote com resposta sintética e prévia). Skill validada pelo validador oficial. Windows release **0.2.0+3** compilado. Capturas inspecionadas em `pile_app/.local/desktop-2026-10-25/`. Fontes, decisões assumidas/confirmadas, revisão crítica e limites em `pile_app/docs/DESKTOP-2026-10-25.md` e `docs/VALIDACAO.md`.
+
+Nenhum arquivo pessoal processado e nenhuma IA autenticada chamada: a resposta JSON usada nos testes é fixture. Sem novo APK/teste Android/WhatsApp, sem alteração de outros apps, sincronização global ou nova publicação do catálogo/release. Público permanece 0.1.1, fonte privada. Próximo ensaio concreto: preparar uma seleção escolhida pelo usuário, abrir o lote no Codex, obter resposta de visão real e revisar/importar; testar restauração manual da Lixeira e unidades removíveis/rede antes de ampliar garantias. Recorte entre unidades, cópia de pastas e arrastar/soltar não implementados.
+
+Instalador local final: `pile_app/dist/0.2.0/Pile-0.2.0-Windows-x64-Setup.exe`, 12.357.410 bytes, SHA-256 `eee2276a119ecdab6747c5e8d016e2001d53d02bc955fcebf9b12af39e94ca70`. Variante Test aprovada em instalação/desinstalação isoladas, executável idêntico ao Release e arquivo extra preservado. Provas sintéticas copiadas para `outputs/pile-desktop-2026-10-25/`. Branch de revisão do app: `codex/pile-desktop-curadoria`; a principal publicada foi preservada.
+
+Fonte enviada ao repositório privado na branch acima: commit `b9675ba` (`feat: expande gerenciador Windows e adiciona curadoria por skill Codex`). Privacidade confirmada pela API (`isPrivate=true`). A central recebe estes registros em commit local, sem push/sincronização global nesta etapa.
+
+Revisão automática recusou remover a proteção de abertura de executáveis/tipos desconhecidos por ampliar execução além do pedido explícito; salvaguarda mantida, sem contorno. Imagens e tipos suportados abrem diretamente. Não há aprovação pendente para os fluxos implementados.
+
 ## Publicação Pile 0.1.1 — 24/10/2026
 
 Nova autorização explícita do usuário: “suba no clustter e no repositório”. A evolução visual está publicada em https://vacilao38.github.io/clustter-cores-downloads/#pile ; release https://github.com/vacilao38/clustter-cores-downloads/releases/tag/pile-v0.1.1 . Windows Setup (11,7 MiB), APKs ARM64 (20,6 MiB), ARM32 (18,4 MiB), x64 (22,0 MiB) e SHA256SUMS.txt públicos, tamanhos/digests SHA-256 locais e remotos iguais e cinco links HTTP 200. Certificado Android igual ao 0.1.0. Instalador testado em pasta/registro isolados, preservando um arquivo sintético extra na desinstalação. Não foi instalada uma cópia de produção neste usuário.
