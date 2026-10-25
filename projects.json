@@ -65,14 +65,16 @@
         "flutter_webrtc 1.6.2+hotfix.4; toolchain C++ para o plugin Windows e credencial TURN pessoal para validar relay",
         "Visual Studio C++ (Desktop development with C++) para Windows",
         "Android SDK e Java 21 para Android",
-        "Protocolo clustter_update com commit Git fixado; instalador Windows via clustter_update/tool/build-installer.py"
+        "Protocolo clustter_update com commit Git fixado; instalador Windows via clustter_update/tool/build-installer.py",
+        "Chain Companion: preparar a ponte Windows via tool/prepare-browser.ps1 antes de gerar o instalador"
       ],
       "setup": [
         "flutter pub get"
       ],
       "validate": [
         "flutter analyze",
-        "flutter test"
+        "flutter test",
+        "flutter test integration_test/capture_test.dart -d windows"
       ],
       "url": "https://github.com/vacilao38/chain.git",
       "branch": "main",
@@ -302,6 +304,28 @@
       ],
       "repo": "clustter-update",
       "scope": "clustter"
+    },
+    {
+      "id": "chain-extension",
+      "path": "chain_extension",
+      "repo": "chain-companion",
+      "visibility": "public",
+      "scope": "clustter",
+      "url": "https://github.com/vacilao38/chain-companion.git",
+      "branch": "main",
+      "requirements": [
+        "Node.js para testes e empacotamento sem dependências npm",
+        "tar.exe do Windows para ZIP",
+        "Chain 1.2.0+ instalado no Windows para a ponte Chrome/Edge"
+      ],
+      "setup": [
+        "node tool/package.mjs"
+      ],
+      "validate": [
+        "node --test test/*.test.mjs",
+        "node tool/package.mjs"
+      ],
+      "handoff": "handoffs/chain-extension.md"
     }
   ],
   "default_visibility_scope": "clustter"
