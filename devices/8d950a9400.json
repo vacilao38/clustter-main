@@ -2,22 +2,22 @@
   "folk": {
     "status": "sincronizado",
     "branch": "main",
-    "head": "ff9964921a35621205f6e6b0decb717df6d61221"
+    "head": "b5d23ce643865f99eab68d9f78295860b6e3ef54"
   },
   "lake": {
     "status": "sincronizado",
     "branch": "main",
-    "head": "06913d59ae3c6528e83757aadf62294f983133b3"
+    "head": "ac3cd86d14f261827ad9ac4dbd584b495742fb5c"
   },
   "chain": {
     "status": "sincronizado",
     "branch": "main",
-    "head": "38feedf8fec8b86dbcb3c99e4103655aaf1931b2"
+    "head": "e9f9862bceb7475d9e92cd25a000affa20e3222d"
   },
   "noon": {
     "status": "sincronizado",
     "branch": "main",
-    "head": "2853a8e7a32fd845867beeda0c3277631637b488"
+    "head": "ff82642a5f90cd2d23b0d78897a4e747806602fe"
   },
   "cofre": {
     "status": "sincronizado",
@@ -52,17 +52,17 @@
   "site": {
     "status": "sincronizado",
     "branch": "main",
-    "head": "a7b14190e7b6bd01c610d763ba4dcb74dc46183a"
+    "head": "fd13d600764d223d0012262efe2038ea6c42046b"
   },
   "pile": {
     "status": "sincronizado",
     "branch": "main",
-    "head": "367bf777f2eafc356c96442e1b1cad5bed504375"
+    "head": "e60aa4f175bd588fb18d89b50e88a1b87a539254"
   },
   "update": {
     "status": "sincronizado",
     "branch": "main",
-    "head": "42d5df5a368031cabf13e098bb67dd6c61995667"
+    "head": "4f518a8e884bf0bbc2e83acb0d95c4e3ad2bcce7"
   },
   "chain-extension": {
     "status": "sincronizado",
