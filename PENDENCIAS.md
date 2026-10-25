@@ -42,3 +42,10 @@ Atualize `handoffs/<id>.md`: resultado, validação realizada, limitações e pr
 - [x] Chain 1.2.0 e Companion 1.0.0 publicados na Clustter por escopo solicitado; sete assets com SHA-256/tamanhos e HTTP 200 conferidos. Extensão em repositório próprio público, Chain mantém exceção privada.
 - [ ] Testar Compartilhar no Android físico e fluxo completo com extensão carregada no Chrome/Edge. Distribuição manual, sem publicação em lojas.
 - [ ] Para compilar Windows Chain: executar tool/prepare-browser.ps1 após o Release e antes do instalador, preservando ID público/origem exata. SDKs/chaves/builds não vão pelo sync.
+
+## Aviso Update — correção do X
+
+- [x] Falha reproduzida: tooltip em MaterialApp.builder sem Overlay ancestral; causava erro visual/área branca. Componente 1.0.1 corrige e oito testes passaram, incluindo hover, fechar e preservar rota/rascunho.
+- [x] Chain 1.2.1+5: análise, 19 testes e integração Windows de hover/fechamento passaram. Windows/APKs compilados e verificados; cinco assets publicados e acessíveis, catálogo/feed atualizado.
+- [x] Código dos outros quatro apps alinhado ao componente corrigido; resolução e análises passaram, somente clustter_update mudou nos lockfiles.
+- [ ] Na próxima distribuição de Folk/Lake/Noon/Pile, incrementar versão/build e recompilar para levar a correção aos binários. Seus downloads antigos não foram republicados neste ajuste.

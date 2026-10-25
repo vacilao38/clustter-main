@@ -28,3 +28,9 @@ Update compartilhado integrado em MaterialApp.builder, dependência Git fixada e
 Validação: análise estática aprovada; testes 40 aprovados e 1 ignorado previsto. Builds Windows Release e três APKs concluídos. Versão real Windows, versão/códigos Android por ABI, certificado original, permissão INTERNET, zipalign de 16 KiB e alinhamento nativo conferidos. Instalador compartilhado testado em instalação/substituição/desinstalação isolada, preservando arquivo extra. O teste nativo do Chain confirmou versão instalada, aviso Update e destino correto. O cliente HTTPS real leu o feed público dos cinco apps.
 
 Pacotes locais em `lake_app/dist/1.2.1/`, ignorados pelo Git. Não sincronizar APKs/executáveis/credenciais. Próximo passo: testar atualização e uso em Android físico; não há aparelho ou emulador disponível nesta validação. Para release futura, seguir docs/UPDATE.md, preservar assinatura e anunciar só pacotes públicos verificados.
+
+## Update — correção de tooltip preparada no código
+
+Dependência e lockfile migrados para clustter_update 1.0.1, ref 4f518a8e884bf0bbc2e83acb0d95c4e3ad2bcce7. Corrige falta de Overlay no aviso em MaterialApp.builder; regressão compartilhada reproduziu erro antes e passou depois (hover no X, fechar, rota/rascunho preservados). Nenhum binário novo deste app foi publicado neste ajuste: versão pública e feed permanecem anteriores. Incrementar versão/build e recompilar antes de distribuir a correção neste app.
+
+Resolução de dependências e flutter analyze --no-pub passaram após alinhar o Update; apenas o pacote compartilhado mudou no lockfile. Binário público anterior preservado.

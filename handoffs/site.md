@@ -35,3 +35,9 @@ Catálogo autorizado com seis ferramentas, preservando as cinco anteriores. Chai
 Site adiciona plataforma/filtro Navegador, sexto destaque e manifesto Update em apps.chain-extension.browser. Gerador aceita downloadName separado de name para nomes seguros dos assets. A imagem da extensão é a janela real de destino do Chain, identificada como tal; usa dados sintéticos do teste nativo, sem captura da conversa ou biblioteca real. Limites de validação Android e browser explícitos no catálogo/releases.
 
 Pages built confirmado no commit 0fef21846992bf70cd9c4b72098a107b7c2f3afa. Interface pública conferida: seis destaques, filtro Navegador retorna um produto, modal Companion 1.0.0 com ZIP e SHA-256 corretos, imagem carregada. Largura efetiva 498 px sem overflow no documento ou modal (454/454). Catálogo público igual à fonte; clientes Dart/JS confirmaram Chain 1.2 e Companion 1.0 no feed. Captura pública em outputs/chain-1.2-publication/companion-publicado.png. Próximo passo: validar fluxo completo com a extensão carregada e Android físico; atualizar somente os produtos autorizados.
+
+## Chain 1.2.1 — tooltip do aviso
+
+Catálogo e feed anunciam Chain 1.2.1 no lugar de 1.2.0, preservando os outros cinco itens e Companion 1.0.0. Pacotes públicos verificados antes do anúncio: Setup, três APKs e hashes. Deploy enviado em 95355eb. Correção preserva rota/rascunho após hover/fechamento do X; testes do componente e Windows nativo confirmaram.
+
+Pages built confirmado em 95355eb3e4a254f0fdd98636c8a44c572603bf80. Catálogo público igual à fonte e feed Windows/Android do Chain em 1.2.1.

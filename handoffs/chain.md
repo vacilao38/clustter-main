@@ -68,3 +68,11 @@ Validação: analyze sem problemas; 19 testes Flutter passaram; duas integraçõ
 Limites: Android físico e fluxo completo com Companion carregado em Chrome/Edge não foram executados. Não afirmar homologação de lojas; extensão distribuída manualmente. Captura segura de UI sintética em outputs/chain-1.2-publication/captura-rapida-windows.png e tools_pool_site/dist/assets/chain-capture-1.2.png. Uma captura nativa que pegou outra janela foi descartada e não publicada. Docs: chain_app/docs/CAPTURE.md e RELEASE-1.2.md.
 
 Próximo passo: testar Compartilhar real (YouTube/navegador, frio/quente, salvar/cancelar, teclado/rotação) no Android e carregar o ZIP no Chrome/Edge com Chain instalado. Confirmar captura completa, persistência e retorno à biblioteca. Preservar assinatura e exceção privada.
+
+## Chain 1.2.1 — aviso de atualização
+
+Correção solicitada pelo usuário: ao passar mouse no X, o aviso causava erro visual/área branca. Causa confirmada por reprodução: tooltip do banner inserido em MaterialApp.builder sem Overlay ancestral, acima do Navigator. Update 1.0.1 usa Overlay.wrap estável, preservando o Navigator e a tela atual. Ref 4f518a8e884bf0bbc2e83acb0d95c4e3ad2bcce7, versão app 1.2.1+5, About alinhado.
+
+Validação: reprodução falhou antes e passou depois; oito testes do componente e 19 do Chain aprovados, analyze sem problemas. Integração Windows confirmou PackageInfo 1.2.1, tooltip ao hover, abertura da página, fechamento e trabalho local preservado, usando MaterialApp.builder igual à produção. Pacotes/continuidade da publicação registrados abaixo ao concluir.
+
+Distribuição concluída: https://github.com/vacilao38/clustter-cores-downloads/releases/tag/chain-v1.2.1 . Instalador x64 e três APKs + SHA256SUMS públicos; digests/tamanhos de upload comparados aos locais, cinco URLs HTTP 200. AOT de cada ABI diferente de 1.2.0 confirmado; certificado original, versões/códigos, zipalign e alinhamento nativo aprovados. Companion 1.0.0 mantido. Catálogo/feed atualizados no commit 95355eb. Uso em Android físico continua pendente.
