@@ -27,3 +27,11 @@ Publicados Folk 1.0.1, Lake 1.2.1, Chain 1.1.1, Noon 0.1.1 e Pile 0.1.1, todos c
 Vitrine/feeds no commit 99cff4766a63996c11c35eddd434b4852c09571a; guias atualizados em 1fa13bb05d36372b87180811543d669e86b086ea. A evolução Pile foi preservada no catálogo e no screenshot próprio. Site/JSON/JS públicos retornaram HTTP 200 e o cliente Dart real leu todas as versões finais. Layout desktop e celular conferidos sem overflow horizontal; modal mostra versão e quatro downloads. Código dos apps privados não faz parte desta distribuição.
 
 Próximo passo: manter catálogo e feed coordenados; apps antigos precisam da primeira atualização manual. Compilar/enviar código não autoriza novo produto público.
+
+## Chain 1.2 + Companion — 24/10/2026
+
+Catálogo autorizado com seis ferramentas, preservando as cinco anteriores. Chain 1.2.0: regras de cópia e captura rápida. Novo Chain Companion 1.0.0 para Chrome/Edge Windows com instalação manual, download ZIP e dependência explícita do Setup Chain 1.2+. Dois releases publicados/verificados antes do feed. Sete assets: hashes/tamanhos iguais aos locais, HTTP 200.
+
+Site adiciona plataforma/filtro Navegador, sexto destaque e manifesto Update em apps.chain-extension.browser. Gerador aceita downloadName separado de name para nomes seguros dos assets. A imagem da extensão é a janela real de destino do Chain, identificada como tal; usa dados sintéticos do teste nativo, sem captura da conversa ou biblioteca real. Limites de validação Android e browser explícitos no catálogo/releases.
+
+Pages built confirmado no commit 0fef21846992bf70cd9c4b72098a107b7c2f3afa. Interface pública conferida: seis destaques, filtro Navegador retorna um produto, modal Companion 1.0.0 com ZIP e SHA-256 corretos, imagem carregada. Largura efetiva 498 px sem overflow no documento ou modal (454/454). Catálogo público igual à fonte; clientes Dart/JS confirmaram Chain 1.2 e Companion 1.0 no feed. Captura pública em outputs/chain-1.2-publication/companion-publicado.png. Próximo passo: validar fluxo completo com a extensão carregada e Android físico; atualizar somente os produtos autorizados.

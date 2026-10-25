@@ -35,3 +35,10 @@ Atualize `handoffs/<id>.md`: resultado, validação realizada, limitações e pr
 - [x] Catálogo com cinco destaques/versões e feed público atualizado para Folk 1.0.1, Lake 1.2.1, Chain 1.1.1, Noon 0.1.1 e Pile 0.1.1.
 - [ ] Testar upgrade sobre instalação existente e uso no Android físico. Credencial TURN entre redes continua por aparelho, fora dos pacotes e do sincronizador.
 - [ ] Primeiro upgrade das versões anteriores ao Update é manual. Para futuras versões, publicar/verificar pacotes antes de mudar o feed.
+
+## Chain 1.2 e Companion — 24/10/2026
+
+- [x] Regras de cópia, campo de trilha, captura Android e ponte/extensão Chrome/Edge Windows implementados. Analyze, 19 testes Flutter, dois testes Node e duas integrações Windows aprovados; builds e pacotes verificados.
+- [x] Chain 1.2.0 e Companion 1.0.0 publicados na Clustter por escopo solicitado; sete assets com SHA-256/tamanhos e HTTP 200 conferidos. Extensão em repositório próprio público, Chain mantém exceção privada.
+- [ ] Testar Compartilhar no Android físico e fluxo completo com extensão carregada no Chrome/Edge. Distribuição manual, sem publicação em lojas.
+- [ ] Para compilar Windows Chain: executar tool/prepare-browser.ps1 após o Release e antes do instalador, preservando ID público/origem exata. SDKs/chaves/builds não vão pelo sync.
