@@ -1,5 +1,18 @@
 # Chain
 
+## Estado atual · 25/10/2026 · Chain 1.3.1+7
+
+Movimento revisado por pedido junto ao Pile: indicador compartilhado desliza/estica em 240 ms; menus fade integral de 120 ms, páginas 260/160 ms, diálogos 200/140 ms; roda desacelera em 190 ms, sem scrollbar persistente. Redução do sistema e preferência local respeitadas. Nenhuma mudança em protocolos, TURN, confiança, conflitos, sons ou dados.
+
+37 testes Flutter e análise sem problemas; três integrações nativas Windows passaram. Capturas novas de fixtures sintéticas nos cinco tamanhos em artifacts/. Setup por usuário e variante isolada: instalar/substituir/desinstalar preservando arquivo sintético e hashes de exe, plugin de áudio, ponte e WAV. Companion incluído. APKs ARM64/ARM32/x64: certificado original, versão/códigos, share target, permissões, sons sem compressão e ZIP/ELF de 16 KiB conferidos; AOT diferente de 1.3.0. Sem aparelho ADB; sem novo ensaio TURN real nesta mudança de UI. Aviso KGP de flutter_webrtc continua conhecido, sem falha.
+
+Fonte privada main `fe829b9`; branch `codex/chain-motion-refinement` integrada fast-forward e enviada. Publicação explicitamente solicitada em 25/10. Release https://github.com/vacilao38/clustter-cores-downloads/releases/tag/chain-v1.3.1 : Setup, três APKs e SHA256SUMS, digest/tamanho remotos e cinco HTTP200 conferidos. Fonte catálogo `ac04268`, distribuição `6219e9a`. Pages confirmou built no commit `6219e9a`; apresentações reais no navegador e feed Windows/Android com as versões novas conferidos. Documentação em `chain_app/docs/MOTION-2026-10-25.md`; padrão geral `docs/MOTION.md`.
+
+Próximo passo: Android físico e avaliações já listadas no histórico; medir frames e sensação da roda em hardware real. Pile e Chain atualizados; demais produtos/Companion preservados. Não executar sincronização global dispensada.
+
+---
+
+
 ## Estado — 24/10/2026
 
 Desenvolvimento 1.1.0+2 em `chain_app`, repositório próprio **privado** `vacilao38/chain`, branch `main`. Em 24/10/2026 o usuário pediu explicitamente essa alteração por preocupação com privacidade e proteção de dados; API do GitHub confirmou `visibility=private` e `private=true`. Exceção registrada no inventário. Não reabrir sem novo pedido explícito. Downloads 1.0 da Clustter não foram atualizados nesta sessão e continuam no repositório público de distribuição.

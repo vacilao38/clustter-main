@@ -11,6 +11,15 @@ Atualizar este arquivo quando surgir algo necessário para continuar em outro co
 - [ ] Compilação e validação de integrações nativas continuam pendentes nos demais apps conforme a preparação anterior. Em 24/10 o usuário retomou o desenvolvimento do Chain: integração Windows WebRTC direto e TURN forçado passou com credencial Metered pessoal. Ver `handoffs/chain.md`; ainda falta Android físico e ensaio celular/PC nas redes reais.
 - [ ] Validar uso no Android físico onde os READMEs registram essa validação pendente.
 
+## Refinamento Pile e Chain · 25/10/2026
+
+- [x] Pile 0.3.0: etiquetas roláveis, coleções gerais preservando detalhes, movimento, regras/limpeza e gestão Android SAF. 58 testes/análise/integração Windows aprovados. Fonte privada main `75854f8`.
+- [x] Chain 1.3.1: indicador/menu/rolagem refinados, 37 testes/análise/três integrações Windows aprovados. Fonte privada main `fe829b9`.
+- [x] Usuário pediu publicar atualizações: duas releases com Setup/APKs/checksums, dez HTTP200/digests/tamanhos conferidos. Catálogo e feed enviados, distribuição `6219e9a` e fonte `ac04268`; Pages built e páginas/feed confirmados.
+- [ ] Testar Android físico: novos fluxos SAF e Lixeira Pile, atualização preservando dados, figurinhas/WhatsApp e avaliações Chain já descritas. Sem aparelho conectado.
+- [ ] Medir FPS e grandes bibliotecas em release. Outras interfaces adotarão docs/MOTION.md quando forem trabalhadas; só Pile/Chain mudaram nesta etapa.
+- Sincronização global dispensada pelo usuário; handoffs mantidos localmente nesta etapa.
+
 ## Ao encerrar uma sessão
 
 ### Pile desktop — 25/10/2026

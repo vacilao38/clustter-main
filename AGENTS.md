@@ -13,3 +13,7 @@
 - Não incluir novos produtos na vitrine nem publicar instaladores sem pedido explícito. Repositório público de código e publicação no catálogo são decisões distintas.
 - O sincronizador ignora o repositório legado que contém a pasta inteira. Não adicionar apps como cópias de código à central.
 - Banco local, biblioteca dos apps e chats do Codex não são transportados por este mecanismo. Chaves de assinatura existentes devem ser transferidas por canal seguro para manter atualizações Android compatíveis.
+
+## Movimento e usabilidade
+
+Ao alterar a interface de um app, seguir `docs/MOTION.md`, solicitado pelo usuário em 25/10/2026. A adoção inicial foi feita no Pile e no Chain; não presumir que os demais já foram atualizados.

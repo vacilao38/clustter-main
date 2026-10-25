@@ -41,3 +41,7 @@ Pages built confirmado no commit 0fef21846992bf70cd9c4b72098a107b7c2f3afa. Inter
 Catálogo e feed anunciam Chain 1.2.1 no lugar de 1.2.0, preservando os outros cinco itens e Companion 1.0.0. Pacotes públicos verificados antes do anúncio: Setup, três APKs e hashes. Deploy enviado em 95355eb. Correção preserva rota/rascunho após hover/fechamento do X; testes do componente e Windows nativo confirmaram.
 
 Pages built confirmado em 95355eb3e4a254f0fdd98636c8a44c572603bf80. Catálogo público igual à fonte e feed Windows/Android do Chain em 1.2.1.
+
+## Pile 0.3.0 e Chain 1.3.1 · 25/10/2026
+
+Usuário solicitou publicar as atualizações. Duas releases de cinco assets cada, pacotes verificados e HTTP200/checksums iguais. Catálogo/Update apenas destes produtos, capturas atuais com fixtures sintéticas, notas e limites atualizados. Fonte `ac04268`, distribuição `6219e9a`. Fonte apps continua privada; outros produtos/Companion preservados. Pages built no commit `6219e9a`; apresentações no navegador, feed e imagens conferidos. Sem sincronização global.

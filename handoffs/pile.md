@@ -1,5 +1,24 @@
 # Pile
 
+## Estado atual · 25/10/2026 · Pile 0.3.0+4
+
+Pedido mais recente: corrigir etiquetas inacessíveis, menus em escada, navegação/rolagem, ajustes e excesso de cartões; regras e limpeza; maior paridade Android, IA somente Codex. Usuário acrescentou explicitamente publicar as atualizações na Clustter. Sincronização global continua dispensada.
+
+Implementado: faixa de todas as etiquetas com setas/roda/arrasto; menu inteiro em fade 120 ms, indicador deslizante 240 ms, páginas 260/160 e roda 190 ms sem scrollbar persistente, respeitando redução do sistema. Ícones menores e ferramentas centrais. Windows inicia no perfil sem varrer descendentes nem elevar acesso. Coleções gerais independentes de etiquetas; migração preserva tags e registros, oculta cartões detalhados sem personalização e cria backup local antes do modelo2. Gerenciar etiquetas permite unir/remover com desfazer e promover a coleção.
+
+Regras combinam tipo/extensão/idade/tamanho/dimensões/nome/caminho/origem explícita, com presets desativados e prévia; não inferem site/app. Organização preserva subpastas e protege destinos reservados. Limpeza mantém SHA-256 para exatos e comparação visual conservadora separada, previews e escolha do exemplar; separar não libera espaço. Codex passa a sugerir coleções amplas e etiquetas específicas; OpenRouter saiu da interface e do entrypoint. Não alterar lotes existentes ou originais automaticamente.
+
+Android: copiar/recortar/colar arquivos dentro da mesma árvore SAF e renomear pasta no mesmo pai quando o provedor permitir. Lixeira Pile guarda em subpasta, com hash/diário e restauração no app, sem liberar espaço; esquecer índice remove mapa de restauração mas não os arquivos. Sem MANAGE_EXTERNAL_STORAGE, sem cópia de pastas/recorte entre árvores. Sem aparelho ADB: integração física pendente, inclusive WhatsApp.
+
+Validação: análise sem problemas, 58 testes Flutter e integração Windows final aprovados, arquivos sintéticos apenas. Editor estreito teve overflow detectado/corrigido e repetição aprovada. Windows Release + Setup de produção/teste gerados; instalação/desinstalação isoladas preservaram sentinel e hash do exe. Três APKs com códigos/versionName/ABI, certificado original e ZIP/ELF de 16 KiB verificados. Skill validada. Capturas locais `.local/refinamento-2026-10-25/`, logs `.local/refinement-*`. Sem FPS ou Android físico medidos.
+
+Fonte privada em main: `75854f8`; branch de trabalho `codex/pile-ux-organizacao`. Fonte anterior da ponte0.2 integrada por fast-forward, sem força. Release https://github.com/vacilao38/clustter-cores-downloads/releases/tag/pile-v0.3.0 : Setup, APKs ARM64/ARM32/x64 e SHA256SUMS. Cinco assets com digest/tamanho remoto iguais; HTTP200 e checksums baixados iguais. Distribuição `6219e9a`, fonte do catálogo `ac04268`. Página https://vacilao38.github.io/clustter-cores-downloads/#pile . Pages confirmou built no commit `6219e9a`; apresentações reais no navegador e feed Windows/Android com as versões novas conferidos.
+
+Decisões/fontes: `pile_app/docs/REFINAMENTO-2026-10-25.md`, `docs/VALIDACAO.md`; regra geral `docs/MOTION.md` desta central, aplicada efetivamente só Pile e Chain. Próximo passo: atualização Android física sobre instalação existente, SAF com diferentes provedores, interrupção/cópia/lixeira/restauração, figurinhas reais; medir frames em release. Manter código privado e não executar sync global dispensado.
+
+---
+
+
 ## Desktop 0.2.0 — 25/10/2026
 
 Novo pedido executado: gerenciador visual Windows com navegação por endereço/unidades/pasta acima, leitura de cada pasta visitada e catálogo local por unidade, sem varredura global automática. Migração única dos índices antigos preserva etiquetas/coleções/capas, preferências, regras com escopo e último diário. Corrigido o bug de renomear na raiz (`./nome.ext` recusado); renomeação em lote (numeração/substituição/prefixo), busca sem acentos e por nomes anteriores, atalhos de etiquetas, menu de botão direito, abrir/revelar direto na prévia, copiar/recortar/colar, renomear pastas e Lixeira nativa. Bytes das imagens preservados; operações com plano/diário/desfazer. Recuperação ambígua de cópia exige conferência manual, sem assumir autoria de arquivo preexistente.
