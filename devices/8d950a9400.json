@@ -12,7 +12,7 @@
   "chain": {
     "status": "sincronizado",
     "branch": "main",
-    "head": "9b19a30ace0db3a44c3cdc02d725bf47f4621af7"
+    "head": "38feedf8fec8b86dbcb3c99e4103655aaf1931b2"
   },
   "noon": {
     "status": "sincronizado",
@@ -52,7 +52,7 @@
   "site": {
     "status": "sincronizado",
     "branch": "main",
-    "head": "ae3a35be59a086723923488fe7fee379243abc44"
+    "head": "5755a1bd699e3579ace7cc8abc1e188b98d7e679"
   },
   "pile": {
     "status": "sincronizado",
@@ -62,6 +62,10 @@
   "update": {
     "status": "sincronizado",
     "branch": "main",
-    "head": "bda5cf610375dc0b0879335d4e58845053fe730c"
+    "head": "fa225aaaf8b2ed9717af6bedc2e386927a0beee2"
+  },
+  "chain-extension": {
+    "status": "pendente",
+    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\chain_extension (código 128). Consulte o Git local."
   }
 }
