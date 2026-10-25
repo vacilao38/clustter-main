@@ -49,3 +49,10 @@ Atualize `handoffs/<id>.md`: resultado, validação realizada, limitações e pr
 - [x] Chain 1.2.1+5: análise, 19 testes e integração Windows de hover/fechamento passaram. Windows/APKs compilados e verificados; cinco assets publicados e acessíveis, catálogo/feed atualizado.
 - [x] Código dos outros quatro apps alinhado ao componente corrigido; resolução e análises passaram, somente clustter_update mudou nos lockfiles.
 - [ ] Na próxima distribuição de Folk/Lake/Noon/Pile, incrementar versão/build e recompilar para levar a correção aos binários. Seus downloads antigos não foram republicados neste ajuste.
+
+## Chain 1.3 — aparelhos, conflitos, movimento e sons
+
+- [x] 1.3.0+6 implementado e publicado: apelidos locais persistentes, quatro resoluções de conflito, transições com redução de movimento e paleta sonora original opcional. Pesquisa detalhada com fontes e riscos de LLM em chain_app/docs/EXPERIENCE-RESEARCH.md.
+- [x] Analyze, 35 testes Flutter e três integrações Windows passaram; Setup isolado validado, APKs/assinatura/alinhamento/permissões/sons conferidos. Cinco downloads públicos HTTP 200; Pages e feed Windows/Android 1.3.0 confirmados. Código Chain permanece privado.
+- [ ] Validar em Android físico: conflitos offline nas duas redes reais, apelidos/reconexão, áudio com música, silencioso/Não Perturbe, segundo plano e redução de movimento. Agradabilidade com participantes e FPS em profile/release ainda não medidos.
+- [ ] Futuro Flutter: acompanhar migração do KGP em flutter_webrtc, cujo build atual emitiu aviso; não trocar versão sem repetir integração direta/TURN e testes Android.
