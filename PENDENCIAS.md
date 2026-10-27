@@ -1,5 +1,11 @@
 # Pendências compartilhadas
 
+## Negócio Clustter — 27/10/2026
+
+- [x] Pesquisa e plano exploratório em `docs/PLANO-NEGOCIO-2026-10-27.md`; sete apps, concorrentes e proposta de ciclo de 90 dias. Handoff em `handoffs/negocio.md`.
+- [ ] Validar público, problema, oferta, tempo disponível e disponibilidade da marca. Folk/Pile e preço de piloto são propostas, não decisões aceitas; sem receita ou retenção observada.
+- [ ] ai-memory local recusou conexão; BMDS gravado/validado, sem indexação wiki. Cache `.bmds/` excluído da sincronização.
+
 ## Chain — WebSocket, 27/10/2026
 
 - [x] Investigação Windows/Android: serviço respondeu em probe sintético; corrigidos no código timeouts/resultado tardio/reconexão e fallback TCP autenticado para convites com internetId. Análise limpa, suíte 44 testes e sete regressões de sinalização aprovadas. Ver handoff/NETWORK.md.
