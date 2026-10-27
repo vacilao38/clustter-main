@@ -52,7 +52,7 @@
   "site": {
     "status": "sincronizado",
     "branch": "main",
-    "head": "ac042681464b868b5d2bff32d97064f6520be6fd"
+    "head": "281f3653f9befd22024dbbfc67fdf866b8f2a4f5"
   },
   "pile": {
     "status": "sincronizado",
@@ -62,7 +62,7 @@
   "update": {
     "status": "sincronizado",
     "branch": "main",
-    "head": "4f518a8e884bf0bbc2e83acb0d95c4e3ad2bcce7"
+    "head": "8b82252d84c109491ce2812b64281ac7ff7e92b6"
   },
   "chain-extension": {
     "status": "sincronizado",
@@ -73,5 +73,10 @@
     "status": "sincronizado",
     "branch": "main",
     "head": "5d5a72059e86d1dd6a92d52fde118b9da792062b"
+  },
+  "bridge": {
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "a45f638ce828abbf64f37c9496250bd1dd6d87bc"
   }
 }
