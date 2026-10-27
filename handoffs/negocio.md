@@ -23,4 +23,4 @@ Confirmar segmento acessível, disponibilidade e investigação do nome; executa
 ## Sincronização
 
 - Ciclo inicial sincronizou aplicativos; central ficou pendente por cache BMDS não ignorado. Exclusão corrigida sem apagar memória ou banco.
-- Ciclo final: em execução; conferir resultado antes de declarar sincronização concluída.
+- Ciclo final concluído com código 0: todos os aplicativos do inventário e a central sincronizados. Resultado registrado em `.local/status.json`; nota final deste handoff enviada em commit separado, sem push forçado.
