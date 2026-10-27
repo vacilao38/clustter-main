@@ -1,31 +1,38 @@
 {
   "folk": {
-    "status": "pendente",
-    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\folk_app (código 128). Consulte o Git local."
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "b5d23ce643865f99eab68d9f78295860b6e3ef54"
   },
   "lake": {
-    "status": "pendente",
-    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\lake_app (código 128). Consulte o Git local."
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "ac3cd86d14f261827ad9ac4dbd584b495742fb5c"
   },
   "chain": {
-    "status": "pendente",
-    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\chain_app (código 128). Consulte o Git local."
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "b51d1d59bf3492bf1f09ed51643fee5735de5462"
   },
   "noon": {
-    "status": "pendente",
-    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\noon_app (código 128). Consulte o Git local."
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "ff82642a5f90cd2d23b0d78897a4e747806602fe"
   },
   "cofre": {
-    "status": "pendente",
-    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\cofre_imagens_app (código 128). Consulte o Git local."
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "8e4f707c7054a7a46cd6e937386c35aeeaac0b34"
   },
   "memoteca": {
-    "status": "pendente",
-    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\memoteca_app (código 128). Consulte o Git local."
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "3c8b3e4b4243006ad2a8369f1fc82558a6feac62"
   },
   "colaboradores": {
-    "status": "pendente",
-    "detail": "Falhou: git -C C:\\Users\\Adm\\Documents\\TOOLS-POOL\\acompanhamento_colaboradores_app (código 128). Consulte o Git local."
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "5bf1f390169cc58694e790f8848844465f5bb1c6"
   },
   "rota-clara": {
     "status": "sincronizado",
