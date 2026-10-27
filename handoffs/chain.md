@@ -1,5 +1,15 @@
 # Chain
 
+## Diagnóstico WebSocket — 27/10/2026
+
+Relato do usuário: conexão Windows/Android falhou com WebSocket; não forneceu mensagem completa, versões ou redes. Incidente específico não confirmado. Probe Dart real desta máquina contra o endpoint autorizado 0.peerjs.com: DNS OK, WSS 625 ms e OPEN 631 ms. Não confundir com teste do Android nem com TURN. Detalhes/fontes em chain_app/docs/NETWORK.md, seção de diagnóstico.
+
+Corrigidos no código: prazo de OPEN separado do handshake (12 s para conectar, 20 s registro), heartbeat desde abertura; resultado tardio de WebSocket.connect fechado após timeout; epoch impede tentativa antiga sobrepor a nova; retry antigo não cancela heartbeat novo. PeerSession tenta TCP autenticado nos endereços do convite quando sinalização/WebRTC falham, mesmo se convite tem internetId; não promete acesso a IP privado entre redes distintas. Mensagens seguras por etapa, TLS/HTTP/ID ocupado, sem tokens/payloads.
+
+Validação: suíte completa 44 testes aprovada; após ajuste final de retry, análise sem problemas e sete testes específicos aprovados. WebSockets locais reais simulam atraso/recusa/falta de OPEN/cancelamento; fallback TCP usa autenticação real do Chain. Sem novo ensaio Android físico, TURN pessoal ou builds Windows/Android. Não houve publicação de nova versão; downloads continuam 1.3.1. Próximo passo: coletar erro exato e versões do usuário, reproduzir no celular/PC e, se solicitada distribuição, incrementar versão/build, recompilar e validar antes de alterar catálogo/feed. Não modificar credencial ou serviço por hipótese.
+
+Memória aprovada inicializada apenas em chain_app: .ai-memory.toml com workspace default/project chain_app-2ee5c9b700; memory.bmds.md validada, célula bmds://chain_app-2ee5c9b700/cell/memoria-7ae0b04a96@1, pilha diagnostics@1. Sem orgânicas existentes para invalidar. ai-memory não respondeu na porta local; consulta/indexação wiki não concluídas. Nenhum segredo ou conversa integral gravado. Sync inicial aprovado; executar/conferir final.
+
 ## Estado atual · 25/10/2026 · Chain 1.3.1+7
 
 Movimento revisado por pedido junto ao Pile: indicador compartilhado desliza/estica em 240 ms; menus fade integral de 120 ms, páginas 260/160 ms, diálogos 200/140 ms; roda desacelera em 190 ms, sem scrollbar persistente. Redução do sistema e preferência local respeitadas. Nenhuma mudança em protocolos, TURN, confiança, conflitos, sons ou dados.

@@ -1,5 +1,11 @@
 # Pendências compartilhadas
 
+## Chain — WebSocket, 27/10/2026
+
+- [x] Investigação Windows/Android: serviço respondeu em probe sintético; corrigidos no código timeouts/resultado tardio/reconexão e fallback TCP autenticado para convites com internetId. Análise limpa, suíte 44 testes e sete regressões de sinalização aprovadas. Ver handoff/NETWORK.md.
+- [ ] Coletar mensagem completa e versões do incidente; validar em Android físico e redes reais. Não atribuir o erro a TURN sem separar a etapa de sinalização. Nenhuma nova distribuição realizada; downloads 1.3.1 mantidos.
+- [ ] ai-memory indisponível nesta sessão: BMDS local do Chain gravada e validada, wiki ainda não consultada/indexada.
+
 Atualizar este arquivo quando surgir algo necessário para continuar em outro computador. Não registrar senhas, tokens, endereços de clientes ou dados pessoais.
 
 - [x] Executado `install.ps1` no segundo computador com autenticação GitHub existente. Por pedido do usuário, esta máquina trabalha e sincroniza exclusivamente Folk, Lake, Chain e Noon; a central é mantida e os demais projetos e a vitrine são ignorados por seleção local.
