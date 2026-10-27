@@ -1,0 +1,6 @@
+workspace = "default"
+project = "clustter-main-431c2336ed"
+
+[profile]
+contribute = true
+consume = true
