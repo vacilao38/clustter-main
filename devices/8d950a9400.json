@@ -68,5 +68,10 @@
     "status": "sincronizado",
     "branch": "main",
     "head": "86f65bd0f5a28101d5c03e3d96c98c529811aced"
+  },
+  "thermo": {
+    "status": "sincronizado",
+    "branch": "main",
+    "head": "ce280e45623c9544ce139cdfe4338722f0c99c2b"
   }
 }
