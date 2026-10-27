@@ -77,3 +77,10 @@ Atualize `handoffs/<id>.md`: resultado, validação realizada, limitações e pr
 - [x] Analyze, 35 testes Flutter e três integrações Windows passaram; Setup isolado validado, APKs/assinatura/alinhamento/permissões/sons conferidos. Cinco downloads públicos HTTP 200; Pages e feed Windows/Android 1.3.0 confirmados. Código Chain permanece privado.
 - [ ] Validar em Android físico: conflitos offline nas duas redes reais, apelidos/reconexão, áudio com música, silencioso/Não Perturbe, segundo plano e redução de movimento. Agradabilidade com participantes e FPS em profile/release ainda não medidos.
 - [ ] Futuro Flutter: acompanhar migração do KGP em flutter_webrtc, cujo build atual emitiu aviso; não trocar versão sem repetir integração direta/TURN e testes Android.
+
+## Thermo — 27/10/2026
+
+- [x] Novo aplicativo Windows de reserva/atividade do Codex; repositório próprio público `vacilao38/thermo`, inventário e handoff/thermo.md. Interface neomórfica clara/escura, compacto, sempre visível, bandeja e dados reais.
+- [x] 13 testes, análise sem problemas, integração Windows/conta real, Release e instalador local. Instalação/desinstalação isoladas preservaram arquivo extra. Ajuste final MSVC UTF-8 verificado em execução; detalhes e hash em docs/VALIDATION.md do app.
+- [ ] Ensaiar outro Windows sem SDK, layout diferente de instalação do Codex, DPI/múltiplos monitores e Narrador. Serviço ai-memory local indisponível; BMDS validado, sem indexação de wiki declarada.
+- O aplicativo e seus downloads não foram publicados na vitrine/feed. Publicação continua dependendo de pedido explícito.
