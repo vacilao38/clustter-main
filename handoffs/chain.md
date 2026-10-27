@@ -1,5 +1,11 @@
 # Chain
 
+## Publicação da correção — 27/10/2026 · 1.3.2+8
+
+Pedido explícito #[Exec]: publicar a correção do Chain na Clustter Cores. Fonte privada enviada em 73a1809. Sem novas funcionalidades. Analyze limpo, 44 testes Flutter e três integrações nativas Windows passaram. Builds finais Windows/APKs concluídos; ponte Companion preparada. Instalador isolado instalado, substituído e removido preservando arquivo extra e hashes de payload. APKs preservam certificado original, versões/códigos superiores, permissões e alinhamento ZIP/ELF 16 KiB; sons sem compressão e AOTs diferentes de 1.3.1.
+
+Release pública https://github.com/vacilao38/clustter-cores-downloads/releases/tag/chain-v1.3.2 : Setup x64, três APKs e SHA256SUMS com digest/tamanho de upload conferidos, cinco URLs HTTP200 e checksums baixados iguais aos locais. Variante de teste não publicada. Fonte do catálogo 27ea5b9; distribuição ee30787f963420967ce44cc4765bfe2fe45ab560. Só Chain alterado; demais produtos preservados. Evidências locais em outputs/chain-1.3.2-publication. A adaptação do script de publicação ao catálogo raiz atual (products, em vez de publishedProducts) foi concluída antes do commit público. Verificação de Pages/feed ao encerrar. Android físico e redes reais permanecem pendentes; publicação não confirma a causa do incidente original.
+
 ## Diagnóstico WebSocket — 27/10/2026
 
 Relato do usuário: conexão Windows/Android falhou com WebSocket; não forneceu mensagem completa, versões ou redes. Incidente específico não confirmado. Probe Dart real desta máquina contra o endpoint autorizado 0.peerjs.com: DNS OK, WSS 625 ms e OPEN 631 ms. Não confundir com teste do Android nem com TURN. Detalhes/fontes em chain_app/docs/NETWORK.md, seção de diagnóstico.
