@@ -57,6 +57,8 @@ Se duas máquinas alterarem o mesmo trecho, o checkpoint é preservado, o merge 
 
 ## Limites e privacidade
 
+Bridge foi solicitado em 27/10/2026 para Windows e Android, com repositório privado por pedido explícito. O mesmo pedido autorizou sua distribuição na Clustter. Consultar `handoffs/bridge.md` para versão, validação e limites, especialmente o ensaio pendente em Android físico.
+
 - Novos projetos Clustter têm repositório próprio público por padrão; exceções precisam de justificativa no inventário. Noon permanece público. Em 24/10/2026, após a abertura anterior, o usuário pediu tornar Chain privado por preocupação com privacidade e proteção de dados; a alteração foi confirmada no GitHub e registrada no inventário. Folk e Lake preservam a exceção privada. Projetos legados fora da família Clustter ficam privados.
 - A central não contém senhas nem arquivos principais dos apps. `.gitignore` e a verificação do sincronizador bloqueiam caminhos de dados, chaves, credenciais reconhecíveis e arquivos maiores que 90 MiB. Isso não substitui revisar o que é colocado em um repositório público.
 - Credenciais GitHub são próprias de cada PC. Chaves de assinatura Android, modelos grandes, bases pessoais e bibliotecas locais precisam de transferência separada quando necessárias. Consulte `PENDENCIAS.md`.

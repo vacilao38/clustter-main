@@ -352,6 +352,34 @@
         "flutter build windows --release --no-pub"
       ],
       "handoff": "handoffs/thermo.md"
+    },
+    {
+      "id": "bridge",
+      "path": "bridge_app",
+      "repo": "bridge",
+      "visibility": "private",
+      "scope": "clustter",
+      "privacy_reason": "Pedido explícito do usuário em 27/10/2026 para repositório privado. Publicação do aplicativo e downloads na Clustter autorizada separadamente no mesmo pedido.",
+      "url": "https://github.com/vacilao38/bridge.git",
+      "branch": "main",
+      "handoff": "handoffs/bridge.md",
+      "requirements": [
+        "Flutter 3.44.1 / Dart 3.12.1",
+        "Windows 10/11 x64; Visual Studio C++ Desktop e Windows SDK",
+        "Android 7+ (API 24); Android SDK 36, NDK Flutter e Java 21",
+        "Acessibilidade e IME Bridge ativados manualmente no Android; mesma rede IPv4/hotspot",
+        "Protocolo clustter_update fixado, instalador por usuário NSIS compartilhado; preservar chave Android original"
+      ],
+      "setup": [
+        "flutter pub get --enforce-lockfile"
+      ],
+      "validate": [
+        "flutter analyze --no-pub",
+        "flutter test --no-pub",
+        "flutter test integration_test/windows_test.dart -d windows --no-pub",
+        "flutter build windows --release --no-pub",
+        "flutter build apk --release --split-per-abi"
+      ]
     }
   ],
   "default_visibility_scope": "clustter"

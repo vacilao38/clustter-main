@@ -84,3 +84,9 @@ Atualize `handoffs/<id>.md`: resultado, validação realizada, limitações e pr
 - [x] 13 testes, análise sem problemas, integração Windows/conta real, Release e instalador local. Instalação/desinstalação isoladas preservaram arquivo extra. Ajuste final MSVC UTF-8 verificado em execução; detalhes e hash em docs/VALIDATION.md do app.
 - [ ] Ensaiar outro Windows sem SDK, layout diferente de instalação do Codex, DPI/múltiplos monitores e Narrador. Serviço ai-memory local indisponível; BMDS validado, sem indexação de wiki declarada.
 - O aplicativo e seus downloads não foram publicados na vitrine/feed. Publicação continua dependendo de pedido explícito.
+
+## Bridge — 27/10/2026
+
+- [x] App Windows/Android 0.1.0, fonte privada confirmada e catálogo/downloads autorizados; cinco assets públicos verificados e Pages built. Análise, 10 testes, integração Windows, Setup isolado e APKs por ABI aprovados. Ver handoffs/bridge.md.
+- [ ] Validar em Android físico: gestos, IME, apps reais, rotação, bloqueio, bateria, notificação e segundo plano; testar redes reais e outro Windows/DPI/layouts.
+- [ ] ai-memory indisponível: BMDS local validado, sem consulta/indexação wiki. Build Android sem --no-pub por Flutter #169336; não executar Flutter concorrente no checkout.

@@ -45,3 +45,7 @@ Pages built confirmado em 95355eb3e4a254f0fdd98636c8a44c572603bf80. Catálogo p�
 ## Pile 0.3.0 e Chain 1.3.1 · 25/10/2026
 
 Usuário solicitou publicar as atualizações. Duas releases de cinco assets cada, pacotes verificados e HTTP200/checksums iguais. Catálogo/Update apenas destes produtos, capturas atuais com fixtures sintéticas, notas e limites atualizados. Fonte `ac04268`, distribuição `6219e9a`. Fonte apps continua privada; outros produtos/Companion preservados. Pages built no commit `6219e9a`; apresentações no navegador, feed e imagens conferidos. Sem sincronização global.
+
+## Bridge 0.1.0 · 27/10/2026
+
+Novo produto explicitamente autorizado: teclado/mouse Windows → Android local. Cinco assets públicos verificados, fonte privada. Fonte/catalog.json e JSONs gerados atualizados; somente Bridge acrescentado, seis produtos anteriores preservados integralmente. Pages built em 6b25ffeb0733354272c88e7d2b4302bd5f7b4826; catálogo público igual à fonte, Update Windows/Android em 0.1.0 e imagem HTTP 200. Modal e quatro downloads conferidos no navegador estreito. Limitações de Android físico explícitas. Prova local outputs/bridge-publication/bridge-publicado.png.
