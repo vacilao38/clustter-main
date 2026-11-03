@@ -119,3 +119,94 @@
   }
 }
 ```
+
+```bmds-json
+{
+  "bmds": "0.1",
+  "kind": "cache",
+  "id": "bmds://clustter-main-431c2336ed/cell/memoria-ce86604449",
+  "rev": 1,
+  "cell_type": "atomic",
+  "created_at": "2026-11-03T10:34:38-03:00",
+  "tags": [],
+  "slots": [
+    "Avaliação exploratória de Steam/TUNIC no Tab S10 Lite de 6 GB; plano de teste local produzido, sem implementação aprovada nem desempenho medido.",
+    [
+      "Usuário confirmou 6 GB de RAM e declarou possuir licenças reais dos jogos.",
+      "Samsung informa Exynos 1380/Mali-G68; TUNIC declara 8 GB e GTX 660/RX 460 como mínimo de PC, o que não é consumo medido.",
+      "GameNative oferece a categoria de download/execução local, mas seus avisos incluem componentes proprietários; não presumir fork integral redistribuível.",
+      "ai-memory indisponível nas ferramentas desta sessão; memória local sem indexação wiki."
+    ],
+    [],
+    [
+      "Proposta não aceita: testar runtime existente no tablet, cliente Steam original e TUNIC a 540p/720p, meta de 30 FPS sustentados antes de decidir MVP.",
+      "Coletar modelo exato, Android/One UI/driver, acesso ao tablet e preferência sobre streaming.",
+      "Revisar termos específicos e licenças dos componentes antes de distribuição; não afirmar conformidade integral apenas pela posse do jogo."
+    ],
+    [
+      "TUNIC",
+      "Steam",
+      "Galaxy Tab S10 Lite",
+      "Winlator",
+      "GameNative",
+      "Mali-G68"
+    ],
+    [
+      {
+        "date": "2026-11-03",
+        "event": "Pesquisa e plano, sem instalar APK, baixar jogo, autenticar conta ou medir FPS."
+      }
+    ],
+    {
+      "sources": [
+        "docs/PLANO-STEAM-ANDROID-TUNIC-2026-11-03.md",
+        "Confirmação do usuário: 6 GB",
+        "https://store.steampowered.com/app/553420/TUNIC/",
+        "https://store.steampowered.com/subscriber_agreement/",
+        "https://github.com/utkarshdalal/GameNative/blob/master/THIRD_PARTY_NOTICES"
+      ],
+      "uncertainty": [
+        "Sem teste no aparelho",
+        "Execução local é premissa de planejamento; streaming não confirmado",
+        "Metas e arquitetura são propostas, não decisões aceitas",
+        "Sem parecer jurídico individual"
+      ]
+    },
+    [
+      "steam",
+      "android",
+      "tunic",
+      "tab-s10-lite",
+      "emulacao",
+      "mali",
+      "plano"
+    ]
+  ],
+  "provenance": {
+    "operation": "write",
+    "sources": [],
+    "actor": "human"
+  }
+}
+```
+```bmds-json
+{
+  "bmds": "0.1",
+  "kind": "stack",
+  "id": "bmds://clustter-main-431c2336ed/stack/steam-android",
+  "rev": 1,
+  "updated_at": "2026-11-03T10:34:38-03:00",
+  "logical_clock": 1,
+  "members": [
+    {
+      "id": "bmds://clustter-main-431c2336ed/cell/memoria-ce86604449",
+      "rev": 1
+    }
+  ],
+  "policy": {
+    "soft_cells": 16,
+    "hard_tokens": 4096,
+    "keep_hot": 4
+  }
+}
+```
