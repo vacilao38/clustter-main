@@ -380,6 +380,28 @@
         "flutter build windows --release --no-pub",
         "flutter build apk --release --split-per-abi"
       ]
+    },
+    {
+      "id": "steam-save-sync",
+      "path": "steam_save_sync",
+      "repo": "steam-save-sync",
+      "visibility": "public",
+      "scope": "clustter",
+      "url": "https://github.com/vacilao38/steam-save-sync.git",
+      "branch": "main",
+      "handoff": "handoffs/steam-save-sync.md",
+      "requirements": [
+        "Python 3.10+ no Windows e no Linux; somente biblioteca padrão",
+        "Diretório compartilhado montado e gravável nos dois sistemas",
+        "Caminho dos saves por jogo/sistema; jogo e Steam fechados durante a cópia"
+      ],
+      "setup": [
+        "python steam_saves.py (menu para configurar diretório e cadastrar jogos; no Linux usar python3)"
+      ],
+      "validate": [
+        "python -X utf8 -m unittest -v",
+        "python steam_saves.py --help"
+      ]
     }
   ],
   "default_visibility_scope": "clustter"
