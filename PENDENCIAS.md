@@ -1,5 +1,11 @@
 # Pendências compartilhadas
 
+## Steam Saves Sync — 09/11/2026
+
+- [x] Script bilateral Windows/Linux por diretório compartilhado, com backup, simulação e conflitos sem escolha automática. Repositório próprio público `vacilao38/steam-save-sync`; inventário e handoff adicionados. Sem publicação no catálogo/downloads.
+- [x] 21 testes locais; suíte e interface aprovadas nos quatro ambientes remotos Windows/Ubuntu com Python 3.10/3.12. Sync com rede concluído após falha inicial; detalhes em `handoffs/steam-save-sync.md`.
+- [ ] Cadastrar diretório compartilhado e pastas reais por jogo/sistema e ensaiar com backup em dual boot real. Nenhum save real foi acessado. ai-memory indisponível; BMDS local válido, wiki não consultada/indexada.
+
 ## Negócio Clustter — 27/10/2026
 
 - [x] Pesquisa e plano exploratório em `docs/PLANO-NEGOCIO-2026-10-27.md`; sete apps, concorrentes e proposta de ciclo de 90 dias. Handoff em `handoffs/negocio.md`.

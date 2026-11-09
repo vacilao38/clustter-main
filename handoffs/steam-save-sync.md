@@ -8,7 +8,7 @@ Script Python 3.10+ sem pacotes externos; menu e iniciadores Windows/Linux. Cada
 
 ## Validação
 
-21 testes locais aprovados no Windows com Python 3.12.14 e dados sintéticos. Sintaxe Python 3.10 e interface de comandos verificadas. Fluxo remoto preparado para Windows/Ubuntu com Python 3.10/3.12; conferir resultado final no repositório. Não ensaiado em dual boot real ou com saves reais. WSL indisponível e Git Bash restrito no ambiente local.
+21 testes locais aprovados no Windows com Python 3.12.14 e dados sintéticos. Sintaxe Python 3.10 e interface de comandos verificadas. Os quatro ambientes remotos Windows/Ubuntu com Python 3.10/3.12 concluíram com sucesso, suíte de 21 testes e `--help`: https://github.com/vacilao38/steam-save-sync/actions/runs/42645728269. Não ensaiado em dual boot real ou com saves reais. WSL indisponível e Git Bash restrito no ambiente local.
 
 Substituição atômica por arquivo; em interrupção no meio do conjunto pode ser necessária restauração manual do backup. Formatos Windows/Linux precisam ser compatíveis no próprio jogo; não há conversão nem descoberta automática dos caminhos.
 
@@ -18,4 +18,5 @@ Substituição atômica por arquivo; em interrupção no meio do conjunto pode s
 - Antes de jogar no outro sistema, sincronizar; após jogar, sincronizar novamente, com jogo e Steam fechados. Coordenar Steam Cloud do jogo para evitar restauração externa de versão anterior.
 - Código público por padrão autorizado pelo projeto; nenhuma publicação do script/downloads na vitrine Clustter foi solicitada ou feita. Ferramenta de script, sem instalador/app ou integração Update nesta entrega.
 - ai-memory não disponível entre as ferramentas desta sessão; manter BMDS local validado, sem declarar consulta/indexação da wiki.
-- Sync inicial da central falhou por rede (`getaddrinfo() thread failed to start`); resultado da tentativa final deve ser registrado antes de encerrar.
+- Registro local: `steam_save_sync/memory.bmds.md`, `bmds://steam_save_sync-1307c24e60/cell/memoria-26df3aff76@1`; válido, com resultado remoto parcial no instante da gravação, superado pelo resultado completo acima.
+- Sync inicial da central falhou por rede (`getaddrinfo() thread failed to start`); repetição com acesso à rede concluiu com todos os projetos e a central sincronizados. Reexecutar após os últimos registros desta entrega.
