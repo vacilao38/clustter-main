@@ -393,7 +393,8 @@
       "requirements": [
         "Python 3.10+ no Windows e no Linux; somente biblioteca padrão",
         "Diretório compartilhado montado e gravável nos dois sistemas",
-        "Caminho dos saves por jogo/sistema; jogo e Steam fechados durante a cópia"
+        "Itens de qualquer jogo/plataforma ou sem launcher; pasta/arquivo individual com caminho próprio Windows/Linux",
+        "Jogo e seu launcher fechados durante a cópia; seletor gráfico opcional via Tkinter ou caminho digitado"
       ],
       "setup": [
         "python steam_saves.py (menu para configurar diretório e cadastrar jogos; no Linux usar python3)"

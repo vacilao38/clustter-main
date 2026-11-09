@@ -1,5 +1,20 @@
 # Steam Saves Sync — 09/11/2026
 
+## Atualização 1.1.0 — qualquer jogo e caminhos por item
+
+Novo pedido do usuário: selecionar saves de outros jogos/plataformas, incluindo jogos sem plataforma, e escolher o caminho de cada item. Implementado em `ca2c0f4`, enviado à `main` pública.
+
+- Itens com nome livre, plataforma/launcher como rótulo opcional, tipo pasta inteira ou arquivo individual e caminho próprio Windows/Linux.
+- Menu para listar/editar itens, selecionar vários por número e procurar arquivos/pastas pelo seletor Tkinter opcional (`?`); alternativa de caminho digitado. Comandos `listar`, `editar`, `adicionar --nome --plataforma --tipo --windows --linux` e múltiplos IDs nos comandos de cópia/simulação.
+- Arquivos individuais podem ter nomes locais diferentes e não copiam seus vizinhos. Backup integral, conflitos por item, hashes, ausência de propagação de exclusões e recusa de tipo divergente preservados.
+- Cadastro versão 1 lido sem alterações; gravação de edição/configuração migra para versão 2 sem mover saves, IDs ou backups. Atualizar scripts nos dois sistemas antes de editar o cadastro. Simulação/listagem não migram.
+- 44 testes locais passaram no Windows com Python 3.12.14; sintaxe Python 3.10 e ajuda da CLI verificadas. A suíte de 44 testes e ajuda CLI foram aprovadas nos quatro ambientes remotos Windows/Ubuntu com Python 3.10/3.12: https://github.com/vacilao38/steam-save-sync/actions/runs/42668843840.
+- Diálogo gráfico real, dual boot e saves reais não ensaiados. Dados usados nos testes são sintéticos; arquivos pessoais permanecem intocados. Registro na vitrine não solicitado.
+
+Próximo passo: atualizar a cópia do script nos dois sistemas; cadastrar/editar itens e seus caminhos. Usar opções 2 (cadastrar), 8 (editar), 7 (listar), 3/4 (selecionar itens e simular/sincronizar).
+
+Pacote local: `outputs/steam-save-sync/SavesSync-1.1.0.zip`, sem configuração, memória ou saves pessoais. BMDS local: `steam_save_sync/memory.bmds.md`, `bmds://steam_save_sync-1307c24e60/cell/memoria-1712909b9e@1`, validação aprovada. ai-memory indisponível entre as ferramentas; wiki não consultada/indexada. Sync inicial desta etapa falhou por restrição de rede; executar a tentativa final com rede após estes registros.
+
 ## Pedido e entrega
 
 Usuário pediu script bilateral Windows/Linux para copiar/sobrescrever saves Steam e confirmou diretório compartilhado entre os sistemas. Implementação em repositório próprio `https://github.com/vacilao38/steam-save-sync`, pasta `steam_save_sync/`, branch `main`.

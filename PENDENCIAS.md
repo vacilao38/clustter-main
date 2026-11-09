@@ -2,6 +2,9 @@
 
 ## Steam Saves Sync — 09/11/2026
 
+- [x] 1.1.0 enviada ao repositório público: itens de qualquer jogo/launcher ou sem plataforma, pasta ou arquivo individual, nomes livres, caminhos Windows/Linux editáveis e seleção múltipla; seletor nativo opcional. 44 testes locais passaram; suíte e ajuda CLI aprovadas nos quatro ambientes remotos Windows/Ubuntu com Python 3.10/3.12. Detalhes no handoff.
+- [ ] Atualizar scripts dos dois sistemas antes de editar o cadastro antigo (migração de configuração para v2). Validar seletor gráfico real e saves reais; nenhum arquivo pessoal foi alterado nesta implementação.
+
 - [x] Script bilateral Windows/Linux por diretório compartilhado, com backup, simulação e conflitos sem escolha automática. Repositório próprio público `vacilao38/steam-save-sync`; inventário e handoff adicionados. Sem publicação no catálogo/downloads.
 - [x] 21 testes locais; suíte e interface aprovadas nos quatro ambientes remotos Windows/Ubuntu com Python 3.10/3.12. Sync com rede concluído após falha inicial; detalhes em `handoffs/steam-save-sync.md`.
 - [ ] Cadastrar diretório compartilhado e pastas reais por jogo/sistema e ensaiar com backup em dual boot real. Nenhum save real foi acessado. ai-memory indisponível; BMDS local válido, wiki não consultada/indexada.
